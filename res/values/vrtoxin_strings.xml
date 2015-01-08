@@ -1378,5 +1378,9 @@
     <!-- Media ducking -->
     <string name="interruptions_ignore_while_media_title">Prevent Audio Ducking</string>
     <string name="interruptions_ignore_while_media_summary">Do not reduce media playback volume when a notification arrives</string>
+
+    <!-- Linked / unlinked notification volume -->
+    <string name="link_volume_option_title">Link ring and notification volumes</string>
+    <string name="notification_volume_option_title">Notification Volume</string>
  
 </resources>
