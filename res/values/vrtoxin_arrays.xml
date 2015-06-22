@@ -998,6 +998,18 @@
         <item>23</item>
     </string-array>
 
+    <string-array name="keep_screen_on_titles" translatable="false">
+        <item>@string/keep_screen_on_never</item>
+        <item>@string/keep_screen_on_debugging</item>
+        <item>@string/keep_screen_on_charging</item>
+    </string-array>
+
+    <string-array name="keep_screen_on_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
     <string-array name="expanded_desktop_entries" translatable="false">
         <item>@string/expanded_hide_both</item>
         <item>@string/expanded_hide_status</item>

@@ -1070,6 +1070,11 @@
     <string name="membar_bar_color">Bar Free Color</string>
     <string name="membar_bar_used_color">Bar Used Color</string>
 
+    <!-- Keep screen on strings -->
+    <string name="keep_screen_on_never">Never</string>
+    <string name="keep_screen_on_debugging">While USB debugging</string>
+    <string name="keep_screen_on_charging">While charging</string>
+
     <!-- Expanded desktop -->
     <string name="power_menu_expanded_desktop">Expanded Desktop</string>
     <string name="expanded_desktop_summary">Some shit I\'ve never used</string>
