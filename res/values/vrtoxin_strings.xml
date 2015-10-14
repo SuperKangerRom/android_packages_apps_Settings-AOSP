@@ -85,6 +85,10 @@
     <string name="cpu_info">CPU</string>
     <string name="mem_info">RAM</string>
 
+    <!-- Development Settings -->
+    <!-- Dev Options Enabled by Default -->
+    <string name="show_dev_already_enabled">No Need, Development settings are enabled by default.</string>
+
     <!-- SuperSU -->
     <string name="supersu_title">SuperSU</string>
 
