@@ -1801,4 +1801,8 @@
     <string name="onthego_alpha_title">On-The-Go Alpha</string>
     <string name="onthego_alpha_summary">Alpha value of the On-The-Go overlay. Needs re-toggling.</string>
 
+    <!-- Ability to disable hardware keys -->
+    <string name="hw_keys_title">Hardware Keys</string>
+    <string name="hw_keys_summary">On/off switch for hardware keys</string>
+
 </resources>
