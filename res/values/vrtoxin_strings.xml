@@ -1316,4 +1316,9 @@
     <!-- USB debugging notification -->
     <string name="adb_notify">USB Debugging Notification</string>
     <string name="adb_notify_summary">Display a notification when USB debugging is connected</string>
+
+    <!-- Status bar brightness control -->
+    <string name="status_bar_brightness_control_title">Brightness Control</string>
+    <string name="status_bar_brightness_control_summary">Adjust brightness by sliding across status bar</string>
+    <string name="status_bar_brightness_control_info">Automatic brightness must be disabled</string>
 </resources>
