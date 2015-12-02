@@ -78,7 +78,7 @@ public class MainSettings extends SettingsPreferenceFragment {
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsLogger.VRTOXIN_SHIT;
+        return MetricsLogger.VRTOXIN_AOSP;
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -86,7 +86,7 @@ public class MainSettings extends SettingsPreferenceFragment {
         final ActionBar actionBar = getActivity().getActionBar();
         actionBar.setIcon(R.drawable.ic_settings_vrtoxin);
 
-        View view = inflater.inflate(R.layout.preference_vrtoxin_shit, container, false);
+        View view = inflater.inflate(R.layout.preference_vrtoxin_aosp, container, false);
         mViewPager = (ViewPager) view.findViewById(R.id.viewPager);
         mTabs = (PagerSlidingTabStrip) view.findViewById(R.id.tabs);
         StatusBarAdapter StatusBarAdapter = new StatusBarAdapter(getFragmentManager());
