@@ -63,9 +63,19 @@
     <string name="vrtoxin_notifications_title">Notifications</string>
     <string name="status_bar_title">Status Bar</string>
 
-    <!-- About phone screen, VRToxin version -->
-    <string name="vrtoxin_version">VRToxin Version</string>
-    <string name="vrtoxin_version_default">Unknown</string>
+    <!-- VRToxin build date-->
+    <string name="build_date">VRToxin build date</string>
+    <string name="build_date_default">2015-01-01-0000</string>
+
+    <!-- UBER GCC version info -->
+    <string name="uber_android">GCC Android</string>
+    <string name="uber_android_default">Unknown</string>
+    <string name="uber_kernel">GCC Kernel</string>
+    <string name="uber_kernel_default">Unknown</string>
+
+    <!-- UBER GCC build flags info -->
+    <string name="uber_flags">Build Flags</string>
+    <string name="uber_flags_default">None</string>
 
     <!-- VRToxin Changelog -->
     <string name="changelog_vrtoxin_title">Changelog</string>
