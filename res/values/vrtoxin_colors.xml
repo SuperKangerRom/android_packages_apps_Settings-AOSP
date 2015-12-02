@@ -29,6 +29,8 @@
     <color name="floating_action_button_touch_tint">#80ffffff</color>
     <color name="theme_accent">#ff1976D2</color>
 
+    <color name="storage_summary_title_color">#ff607d8b</color>
+
     <!-- Color picker -->
 
     <!-- Color of the hex input divider -->
