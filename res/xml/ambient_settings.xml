@@ -15,10 +15,11 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-                  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-        android:title="@string/doze_title"
-        settings:keywords="@string/doze_title">
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/doze_title"
+    settings:keywords="@string/doze_title">
 
             <SwitchPreference
                     android:key="doze"
@@ -54,6 +55,29 @@
                     android:title="@string/doze_overwrite_value_title"
                     android:summary="@string/doze_overwrite_value_summary"
                     android:dependency="doze" />
+
+            <PreferenceCategory
+                    android:key="doze_brightness_category"
+                    android:title="@string/doze_brightness_category_title"
+                    android:dependency="doze_overwrite_value" >
+                    <com.android.settings.vrtoxin.SystemSettingSwitchPreference
+                        android:key="doze_auto_brightness"
+                        android:title="@string/doze_auto_brightness_title"
+                        android:summary="@string/doze_auto_brightness_summary"
+                        android:defaultValue="false"
+                        android:disableDependentsState="true" />
+
+                    <com.android.settings.vrtoxin.SeekBarPreference
+                        android:key="doze_brightness"
+                        android:title="@string/doze_brightness_title"
+                        android:max="30"
+                        settings:minimum="0"
+                        settings:unitsLeft=""
+                        settings:unitsRight=""
+                        android:persistent="false"
+                        android:dependency="doze_auto_brightness" />
+
+            </PreferenceCategory>
 
             <com.android.settings.vrtoxin.SystemSettingSwitchPreference
                     android:key="doze_pulse_on_notifications"

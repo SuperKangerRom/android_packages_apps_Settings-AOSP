@@ -82,6 +82,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     /** If there is no setting in the provider, use this. */
     private static final int FALLBACK_SCREEN_TIMEOUT_VALUE = 30000;
 
+    private static final String KEY_CATEGORY_DISPLAY = "display";
     private static final String KEY_CATEGORY_INTERFACE = "interface";
 
     private static final String KEY_SCREEN_TIMEOUT = "screen_timeout";
@@ -145,6 +146,9 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
         addPreferencesFromResource(R.xml.display_settings);
 
+
+        PreferenceCategory displayPrefs = (PreferenceCategory)
+                findPreference(KEY_CATEGORY_DISPLAY);
         PreferenceCategory interfacePrefs = (PreferenceCategory)
                 findPreference(KEY_CATEGORY_INTERFACE);
 
@@ -219,7 +223,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         } else {
             removePreference(KEY_LIFT_TO_WAKE);
         }
-
         if (isTapToWakeAvailable(getResources())) {
             mTapToWakePreference = (SwitchPreference) findPreference(KEY_TAP_TO_WAKE);
             mTapToWakePreference.setOnPreferenceChangeListener(this);
