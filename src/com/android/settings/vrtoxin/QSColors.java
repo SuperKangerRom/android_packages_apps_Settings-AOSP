@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2015 DarkKat
- *               2015 CyanideL
+ *               2015 VRToxin
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -57,7 +57,7 @@ public class QSColors extends SettingsPreferenceFragment implements
 
     private static final int DEFAULT_BACKGROUND_COLOR = 0xff263238;
     private static final int WHITE = 0xffffffff;
-    private static final int CYANIDE_BLUE = 0xff1976D2;
+    private static final int VRTOXIN_BLUE = 0xff33b5e5;
 
     private static final int MENU_RESET = Menu.FIRST;
     private static final int DLG_RESET = 0;
@@ -315,13 +315,13 @@ public class QSColors extends SettingsPreferenceFragment implements
                                     WHITE);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.QS_ICON_COLOR,
-                                    CYANIDE_BLUE);
+                                    VRTOXIN_BLUE);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.QS_RIPPLE_COLOR,
-                                    CYANIDE_BLUE);
+                                    VRTOXIN_BLUE);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.QS_TEXT_COLOR,
-                                    CYANIDE_BLUE);
+                                    VRTOXIN_BLUE);
                             getOwner().refreshSettings();
                         }
                     })
