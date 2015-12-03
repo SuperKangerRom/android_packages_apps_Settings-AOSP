@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 
+<!--
      Copyright (C) 2015 The VRToxin Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,19 +15,9 @@
      limitations under the License.
 -->
 <resources>
-
-    <!-- Navigation bar -->
-    <dimen name="navigation_bar_48">48dp</dimen>
-    <dimen name="navigation_bar_44">44dp</dimen>
-    <dimen name="navigation_bar_42">42dp</dimen>
-    <dimen name="navigation_bar_40">40dp</dimen>
-    <dimen name="navigation_bar_36">36dp</dimen>
-    <dimen name="navigation_bar_30">30dp</dimen>
-    <dimen name="navigation_bar_24">24dp</dimen>
-    <dimen name="navigation_bar_0">0dp</dimen>
-
-    <!-- Gesture Anywhere -->
-    <dimen name="ga_gesture_thumbnail_inset">8dip</dimen>
-    <dimen name="ga_gesture_thumbnail_size">64dip</dimen>
-
+    <!-- Overlays for NetworkTraffic to use -->
+    <integer name="maskUp">0x00000001</integer>
+    <integer name="maskDown">0x00000002</integer>
+    <integer name="maskUnit">0x00000004</integer>
+    <integer name="maskPeriod">0xFFFF0000</integer>
 </resources>

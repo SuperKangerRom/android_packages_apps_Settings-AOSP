@@ -58,4 +58,7 @@
     <color name="yellow">#ffffff00</color>
     <color name="orange">#ffffa500</color>
 
+    <!-- Gesture Anywhere -->
+    <color name="ga_gesture_color">#ff1976D2</color>
+
 </resources>
