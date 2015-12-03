@@ -59,7 +59,7 @@ public class StatusLogo extends SettingsPreferenceFragment implements OnPreferen
     private static final String PREF_HIDE_LOGO = "logo_hide_logo";
 
     private static final int DEFAULT_COLOR = 0xffffffff;
-    private static final int CYANIDE_BLUE = 0xff1976D2;
+    private static final int VRTOXIN_BLUE = 0xff33b5e5;
 
     private static final int MENU_RESET = Menu.FIRST;
     private static final int DLG_RESET = 0;
@@ -252,7 +252,7 @@ public class StatusLogo extends SettingsPreferenceFragment implements OnPreferen
                                     Settings.System.STATUS_BAR_VRTOXIN_LOGO_NUMBER_OF_NOTIFICATION_ICONS, 4);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.STATUS_BAR_VRTOXIN_LOGO_COLOR,
-                                    CYANIDE_BLUE);
+                                    VRTOXIN_BLUE);
                             getOwner().refreshSettings();
                         }
                     })
@@ -269,6 +269,6 @@ public class StatusLogo extends SettingsPreferenceFragment implements OnPreferen
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsLogger.VRTOXIN_SHIT;
+        return MetricsLogger.VRTOXIN_AOSP;
     }
 }

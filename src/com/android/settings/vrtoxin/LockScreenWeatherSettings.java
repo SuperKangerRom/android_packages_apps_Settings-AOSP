@@ -317,6 +317,6 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsLogger.VRTOXIN_SHIT;
+        return MetricsLogger.VRTOXIN_AOSP;
     }
 }

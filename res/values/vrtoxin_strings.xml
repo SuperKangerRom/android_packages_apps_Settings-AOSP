@@ -69,6 +69,7 @@
 
     <!-- VRToxin Settings/Summaries and Menu Strings -->
     <string name="status_bar_random_title">Random Settings</string>
+    <string name="status_bar_random_summary">Configure random status bar settings</string>
     <string name="vrtoxin_settings_title">VRToxinMods</string>
     <string name="buttons_settings_title">Buttons</string>
     <string name="interface_settings_title">Interface</string>
@@ -1050,6 +1051,8 @@
     <string name="recents_panel">Recents Panel</string>
     <string name="recents_control_title">Clear All Button Options</string>
     <string name="recents_clear_all_location_title">Clear all recents location</string>
+    <string name="android_recents_clear_all_use_icon_color_title">Icon Color</string>
+    <string name="android_recents_clear_all_use_icon_color_summary">Enable to use a custom color for the clear all button icon</string>
     <string name="recents_clear_all_location_top_right">Top right</string>
     <string name="recents_clear_all_location_top_left">Top left</string>
     <string name="recents_clear_all_location_top_center">Top center</string>
