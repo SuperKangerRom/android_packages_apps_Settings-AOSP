@@ -464,6 +464,6 @@ public class StatusBarBatteryStatusSettings extends SettingsPreferenceFragment i
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsLogger.VRTOXIN_SHIT;
+        return MetricsLogger.VRTOXIN_AOSP;
     }
 }
