@@ -67,10 +67,7 @@ public class NotificationColorSettings extends SettingsPreferenceFragment implem
     private static final int WHITE = 0xffffffff;
     private static final int BLACK = 0xff000000;
     private static final int VRTOXIN_BLUE = 0xff33b5e5;
-    private static final int CYANIDE_BLUE = 0xff1976D2;
     private static final int TRANSLUCENT_VRTOXIN_BLUE = 0x4d33b5e5;
-    private static final int TRANSLUCENT_CYANIDE_BLUE = 0x4d1976D2;
-    private static final int CYANIDE_GREEN = 0x4d1976D2;
     private static final int TRANSLUCENT_WHITE = 0x4dffffff;
     private static final int MATERIAL_GREEN_LIGHT = 0xff009688;
 
@@ -160,7 +157,7 @@ public class NotificationColorSettings extends SettingsPreferenceFragment implem
             mAppIconBgColor.setNewPreviewColor(intColor);
             hexColor = String.format("#%08x", (0xffffffff & intColor));
             mAppIconBgColor.setSummary(hexColor);
-            mAppIconBgColor.setDefaultColors(TRANSLUCENT_WHITE, TRANSLUCENT_CYANIDE_BLUE);
+            mAppIconBgColor.setDefaultColors(TRANSLUCENT_WHITE, TRANSLUCENT_VRTOXIN_BLUE);
             mAppIconBgColor.setOnPreferenceChangeListener(this);
             mAppIconBgColor.setAlphaSliderEnabled(true);
         } else {     
@@ -174,7 +171,7 @@ public class NotificationColorSettings extends SettingsPreferenceFragment implem
         mTextColor.setNewPreviewColor(intColor);
         hexColor = String.format("#%08x", (0xff000000 & intColor));
         mTextColor.setSummary(hexColor);
-        mTextColor.setDefaultColors(WHITE, CYANIDE_BLUE);
+        mTextColor.setDefaultColors(WHITE, VRTOXIN_BLUE);
         mTextColor.setOnPreferenceChangeListener(this);
 
         mIconColor =
@@ -184,7 +181,7 @@ public class NotificationColorSettings extends SettingsPreferenceFragment implem
         mIconColor.setNewPreviewColor(intColor);
         hexColor = String.format("#%08x", (0xff009688 & intColor));
         mIconColor.setSummary(hexColor);
-        mIconColor.setDefaultColors(WHITE, CYANIDE_BLUE);
+        mIconColor.setDefaultColors(WHITE, VRTOXIN_BLUE);
         mIconColor.setOnPreferenceChangeListener(this);
 
         mClearAllIconColor =
@@ -194,7 +191,7 @@ public class NotificationColorSettings extends SettingsPreferenceFragment implem
         mClearAllIconColor.setNewPreviewColor(intColor);
         hexColor = String.format("#%08x", (0xffffffff & intColor));
         mClearAllIconColor.setSummary(hexColor);
-        mClearAllIconColor.setDefaultColors(WHITE, CYANIDE_BLUE);
+        mClearAllIconColor.setDefaultColors(WHITE, VRTOXIN_BLUE);
         mClearAllIconColor.setOnPreferenceChangeListener(this);
         mClearAllIconColor.setAlphaSliderEnabled(true);
 
@@ -332,7 +329,37 @@ public class NotificationColorSettings extends SettingsPreferenceFragment implem
                     .setTitle(R.string.reset)
                     .setMessage(R.string.dlg_reset_values_message)
                     .setNegativeButton(R.string.cancel, null)
-                    .setNeutralButton(R.string.reset_fusion,
+                    .setNeutralButton(R.string.reset_android,
+                        new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.NOTIFICATION_MEDIA_BG_MODE, 1);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.NOTIFICATION_APP_ICON_BG_MODE, 1);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.NOTIFICATION_APP_ICON_COLOR_MODE, 1);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.NOTIFICATION_BG_COLOR,
+                                    WHITE);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.NOTIFICATION_GUTS_BG_COLOR,
+                                    SYSTEMUI_SECONDARY);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.NOTIFICATION_APP_ICON_BG_COLOR,
+                                    TRANSLUCENT_WHITE);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.NOTIFICATION_TEXT_COLOR,
+                                    BLACK);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.NOTIFICATION_ICON_COLOR,
+                                    MATERIAL_GREEN_LIGHT);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.NOTIFICATION_CLEAR_ALL_ICON_COLOR,
+                                    WHITE);
+                            getOwner().refreshSettings();
+                        }
+                    })
+                    .setPositiveButton(R.string.reset_vrtoxin,
                         new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             Settings.System.putInt(getOwner().mResolver,
@@ -346,49 +373,19 @@ public class NotificationColorSettings extends SettingsPreferenceFragment implem
                                     MATERIAL_BLUE_GREY);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.NOTIFICATION_GUTS_BG_COLOR,
-                                    SYSTEMUI_SECONDARY);
+                                    MATERIAL_BLUE_GREY);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.NOTIFICATION_APP_ICON_BG_COLOR,
                                     TRANSLUCENT_VRTOXIN_BLUE);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.NOTIFICATION_TEXT_COLOR,
-                                    VRTOXIN_BLUE);
-                            Settings.System.putInt(getOwner().mResolver,
-                                    Settings.System.NOTIFICATION_ICON_COLOR,
-                                    MATERIAL_GREEN_LIGHT);
-                            Settings.System.putInt(getOwner().mResolver,
-                                    Settings.System.NOTIFICATION_CLEAR_ALL_ICON_COLOR,
-                                    MATERIAL_GREEN_LIGHT);
-                            getOwner().refreshSettings();
-                        }
-                    })
-                    .setPositiveButton(R.string.reset_cyanide,
-                        new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            Settings.System.putInt(getOwner().mResolver,
-                                    Settings.System.NOTIFICATION_MEDIA_BG_MODE, 1);
-                            Settings.System.putInt(getOwner().mResolver,
-                                    Settings.System.NOTIFICATION_APP_ICON_BG_MODE, 1);
-                            Settings.System.putInt(getOwner().mResolver,
-                                    Settings.System.NOTIFICATION_APP_ICON_COLOR_MODE, 1);
-                            Settings.System.putInt(getOwner().mResolver,
-                                    Settings.System.NOTIFICATION_BG_COLOR,
-                                    BLACK);
-                            Settings.System.putInt(getOwner().mResolver,
-                                    Settings.System.NOTIFICATION_GUTS_BG_COLOR,
-                                    BLACK);
-                            Settings.System.putInt(getOwner().mResolver,
-                                    Settings.System.NOTIFICATION_APP_ICON_BG_COLOR,
-                                    TRANSLUCENT_CYANIDE_BLUE);
-                            Settings.System.putInt(getOwner().mResolver,
-                                    Settings.System.NOTIFICATION_TEXT_COLOR,
                                     WHITE);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.NOTIFICATION_ICON_COLOR,
-                                    CYANIDE_GREEN);
+                                    MATERIAL_GREEN_LIGHT);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.NOTIFICATION_CLEAR_ALL_ICON_COLOR,
-                                    CYANIDE_BLUE);
+                                    MATERIAL_GREEN_LIGHT);
                             getOwner().refreshSettings();
                         }
                     })
