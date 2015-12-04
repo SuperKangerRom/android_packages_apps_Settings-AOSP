@@ -25,10 +25,10 @@
     
     <color name="dslv_divider">#1fffffff</color>
     <color name="dslv_icon_dark">#ff009688</color>
-    <color name="dslv_float_background_color">#ff1976D2</color>
+    <color name="dslv_float_background_color">#ff009688</color>
     <color name="floating_action_button_touch_tint">#80ffffff</color>
-    <color name="theme_accent">#ff1976D2</color>
-    <color name="qs_dialog_add_tile_icon_color">#ff1976D2</color>
+    <color name="theme_accent">#ff009688</color>
+    <color name="qs_dialog_add_tile_icon_color">#ff009688</color>
     <color name="qs_background_color">#ff000000</color>
 
     <color name="storage_summary_title_color">#ff607d8b</color>
