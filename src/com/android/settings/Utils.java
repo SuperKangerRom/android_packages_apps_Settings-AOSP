@@ -717,6 +717,59 @@ public final class Utils {
                 .getUsers().size() > 1;
     }
 
+    private static int getScreenType(Context context) {
+        if (sDeviceType == -1) {
+            WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+           DisplayInfo outDisplayInfo = new DisplayInfo();
+            wm.getDefaultDisplay().getDisplayInfo(outDisplayInfo);
+            int shortSize = Math.min(outDisplayInfo.logicalHeight, outDisplayInfo.logicalWidth);
+            int shortSizeDp = shortSize * DisplayMetrics.DENSITY_DEFAULT
+                    / outDisplayInfo.logicalDensityDpi;
+            if (shortSizeDp < 600) {
+                // 0-599dp: "phone" UI with a separate status & navigation bar
+                sDeviceType =  DEVICE_PHONE;
+            } else if (shortSizeDp < 720) {
+                // 600-719dp: "phone" UI with modifications for larger screens
+                sDeviceType = DEVICE_HYBRID;
+            } else {
+                // 720dp: "tablet" UI with a single combined status & navigation bar
+                sDeviceType = DEVICE_TABLET;
+            }
+        }
+        return sDeviceType;
+    }
+
+    public static boolean isPhone(Context context) {
+        return getScreenType(context) == DEVICE_PHONE;
+    }
+
+    public static boolean isHybrid(Context context) {
+        return getScreenType(context) == DEVICE_HYBRID;
+    }
+
+    public static boolean isTablet(Context context) {
+        return getScreenType(context) == DEVICE_TABLET;
+    }
+
+    public static boolean isPackageInstalled(Context context, String pkg, boolean ignoreState) {
+        if (pkg != null) {
+            try {
+                PackageInfo pi = context.getPackageManager().getPackageInfo(pkg, 0);
+                if (!pi.applicationInfo.enabled && !ignoreState) {
+                    return false;
+                }
+            } catch (NameNotFoundException e) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static boolean isPackageInstalled(Context context, String pkg) {
+        return isPackageInstalled(context, pkg, true);
+    }
+
     /**
      * Start a new instance of the activity, showing only the given fragment.
      * When launched in this mode, the given preference fragment will be instantiated and fill the
