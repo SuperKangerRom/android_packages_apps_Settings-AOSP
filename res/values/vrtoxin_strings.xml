@@ -1663,4 +1663,8 @@
     <!-- NFC PreferenceCategory title -->
     <string name="nfc_title_category">NFC</string>
 
+    <!--- Advanced Settings -->
+    <string name="advanced_settings">Advanced Settings</string>
+    <string name="advanced_settings_summary">Enable more settings options</string>
+
 </resources>
