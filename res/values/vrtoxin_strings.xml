@@ -1684,4 +1684,11 @@
     <string name="contrast_str">Contrast: <xliff:g id="contrast_value">%1$s</xliff:g></string>
     <string name="intensity_str">Intensity: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
 
+    <!-- Expanded Header Weather -->
+    <string name="header_weather_title">Weather</string>
+    <string name="expanded_header_show_weather_title">Show Weather</string>
+    <string name="expanded_header_show_weather_summary">Enable to show the weather</string>
+    <string name="expanded_header_show_weather_location_title">Show Location</string>
+    <string name="expanded_header_show_weather_location_summary">Enable to show the location</string>
+
 </resources>
