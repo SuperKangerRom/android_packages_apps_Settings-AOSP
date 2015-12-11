@@ -30,6 +30,7 @@
     <color name="theme_accent">#ff009688</color>
     <color name="qs_dialog_add_tile_icon_color">#ff009688</color>
     <color name="qs_background_color">#ff000000</color>
+    <color name="navbar_day_night_color">#ff000000</color>
 
     <color name="storage_summary_title_color">#ff607d8b</color>
 

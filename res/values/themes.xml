@@ -102,6 +102,7 @@
         <item name="fingerprint_layout_theme">@style/FingerprintLayoutTheme</item>
         <item name="fingerprint_progress_bar_size">@dimen/fingerprint_progress_bar_size</item>
         <item name="fingerprint_ring_radius">@dimen/fingerprint_ring_radius</item>
+        <item name="android:navigationBarColor">@color/navbar_day_night_color</item>
         <item name="ic_menu_add">@drawable/ic_menu_add_dark</item>
         <item name="ic_menu_moreoverflow">@*android:drawable/ic_menu_moreoverflow_holo_dark</item>
         <item name="ic_wps">@drawable/ic_wps_light</item>
