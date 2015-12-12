@@ -1695,4 +1695,7 @@
     <string name="chamber_title">VRToxin Dungeon</string>
     <string name="chamber_toast">The poison has been unleashed</string>
 
+    <!-- Lockscreen visualizer -->
+    <string name="lockscreen_visualizer_title">Music Visualizer</string>
+
 </resources>
