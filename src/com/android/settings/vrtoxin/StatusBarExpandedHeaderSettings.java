@@ -50,7 +50,7 @@ public class StatusBarExpandedHeaderSettings extends SettingsPreferenceFragment 
     private static final int SYSTEMUI_SECONDARY = 0xff384248;
     private static final int BLACK = 0xff000000;
     private static final int WHITE = 0xffffffff;
-    private static final int CYANIDE_BLUE = 0xff1976D2;
+    private static final int VRTOXIN_BLUE = 0xff33b5e5;
 
     private static final int MENU_RESET = Menu.FIRST;
     private static final int DLG_RESET  = 0;
@@ -117,7 +117,7 @@ public class StatusBarExpandedHeaderSettings extends SettingsPreferenceFragment 
         mRippleColor.setNewPreviewColor(intColor);
         hexColor = String.format("#%08x", (0xffffffff & intColor));
         mRippleColor.setSummary(hexColor);
-        mRippleColor.setDefaultColors(WHITE, CYANIDE_BLUE);
+        mRippleColor.setDefaultColors(WHITE, VRTOXIN_BLUE);
         mRippleColor.setOnPreferenceChangeListener(this);
 
         mTextColor =
@@ -128,7 +128,7 @@ public class StatusBarExpandedHeaderSettings extends SettingsPreferenceFragment 
         mTextColor.setNewPreviewColor(intColor);
         hexColor = String.format("#%08x", (0xffffffff & intColor));
         mTextColor.setSummary(hexColor);
-        mTextColor.setDefaultColors(WHITE, CYANIDE_BLUE);
+        mTextColor.setDefaultColors(WHITE, VRTOXIN_BLUE);
         mTextColor.setOnPreferenceChangeListener(this);
 
         mIconColor =
@@ -139,7 +139,7 @@ public class StatusBarExpandedHeaderSettings extends SettingsPreferenceFragment 
         mIconColor.setNewPreviewColor(intColor);
         hexColor = String.format("#%08x", (0xffffffff & intColor));
         mIconColor.setSummary(hexColor);
-        mIconColor.setDefaultColors(WHITE, CYANIDE_BLUE);
+        mIconColor.setDefaultColors(WHITE, VRTOXIN_BLUE);
         mIconColor.setOnPreferenceChangeListener(this);
 
         setHasOptionsMenu(true);
@@ -277,16 +277,16 @@ public class StatusBarExpandedHeaderSettings extends SettingsPreferenceFragment 
                                     Settings.System.STATUS_BAR_EXPANDED_HEADER_SHOW_WEATHER_LOCATION, 1);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.STATUS_BAR_EXPANDED_HEADER_BG_COLOR,
-                                    BLACK);
+                                    0xff000000);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.STATUS_BAR_EXPANDED_HEADER_RIPPLE_COLOR,
-                                    CYANIDE_BLUE);
+                                    VRTOXIN_BLUE);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.STATUS_BAR_EXPANDED_HEADER_TEXT_COLOR,
-                                    CYANIDE_BLUE);
+                                    VRTOXIN_BLUE);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.STATUS_BAR_EXPANDED_HEADER_ICON_COLOR,
-                                    CYANIDE_BLUE);
+                                    VRTOXIN_BLUE);
                             getOwner().refreshSettings();
                         }
                     })

@@ -282,19 +282,22 @@ public class QSColors extends SettingsPreferenceFragment implements
                                     DEFAULT_BACKGROUND_COLOR);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.QS_BRIGHTNESS_SLIDER_COLOR,
-                                    DEFAULT_BACKGROUND_COLOR);
+                                    WHITE);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.QS_BRIGHTNESS_SLIDER_BG_COLOR,
-                                    DEFAULT_BACKGROUND_COLOR);
+                                    WHITE);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.QS_BRIGHTNESS_SLIDER_ICON_COLOR,
                                     WHITE);
                             Settings.System.putInt(getOwner().mResolver,
-                                    Settings.System.QS_ICON_COLOR, WHITE);
+                                    Settings.System.QS_ICON_COLOR,
+                                    WHITE);
                             Settings.System.putInt(getOwner().mResolver,
-                                    Settings.System.QS_RIPPLE_COLOR, WHITE);
+                                    Settings.System.QS_RIPPLE_COLOR,
+                                    WHITE);
                             Settings.System.putInt(getOwner().mResolver,
-                                    Settings.System.QS_TEXT_COLOR, WHITE);
+                                    Settings.System.QS_TEXT_COLOR,
+                                    WHITE);
                             getOwner().refreshSettings();
                         }
                     })
@@ -303,16 +306,16 @@ public class QSColors extends SettingsPreferenceFragment implements
                         public void onClick(DialogInterface dialog, int which) {
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.QS_BACKGROUND_COLOR,
-                                    0xff000000);
+                                    0xb1000000);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.QS_BRIGHTNESS_SLIDER_COLOR,
-                                    0xffff0000);
+                                    0xff009688);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.QS_BRIGHTNESS_SLIDER_BG_COLOR,
-                                    0xff00ff00);
+                                    WHITE);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.QS_BRIGHTNESS_SLIDER_ICON_COLOR,
-                                    0xff00ff00);
+                                    VRTOXIN_BLUE);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.QS_ICON_COLOR,
                                     VRTOXIN_BLUE);
@@ -321,7 +324,7 @@ public class QSColors extends SettingsPreferenceFragment implements
                                     VRTOXIN_BLUE);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.QS_TEXT_COLOR,
-                                    VRTOXIN_BLUE);
+                                    WHITE);
                             getOwner().refreshSettings();
                         }
                     })
