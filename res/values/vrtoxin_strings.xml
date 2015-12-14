@@ -1744,8 +1744,9 @@
     <string name="system_app_remover">System App Remover</string>
 
     <!-- Override theme colors  -->
-    <string name="theme_override_custom_colors_title">Use custom colors</string>
-    <string name="theme_override_custom_colors_summary">This will override theme colors</string>
+    <string name="theme_settings_category">Theme Settings</string>
+    <string name="theme_override_custom_colors_title">Custom Colors</string>
+    <string name="theme_override_custom_colors_summary">This will allow custom color selection in the rom to override any changes made by theme</string>
 
     <!-- Sizes for pattern lockscreen -->
     <string name="lock_pattern_size_3">3x3</string>

@@ -173,8 +173,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private static final String PACKAGE_MIME_TYPE = "application/vnd.android.package-archive";
 
-    private static final String KEY_NIGHT_MODE = "night_mode";
-
     private static final String KEY_CHAMBER_OF_SECRETS = "chamber_of_secrets";
     private static final String KEY_CHAMBER_OF_UNLOCKED_SECRETS =
             "chamber_of_unlocked_secrets";
@@ -260,8 +258,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private SwitchPreference mShowAllANRs;
 
     private ColorModePreference mColorModePreference;
-
-    private DropDownPreference mNightModePreference;
 
     private Preference mChamber;
     private SwitchPreference mChamberUnlocked;
@@ -420,27 +416,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             removePreference(KEY_COLOR_MODE);
             mColorModePreference = null;
         }
-
-        mNightModePreference = (DropDownPreference) findPreference(KEY_NIGHT_MODE);
-        final UiModeManager uiManager = (UiModeManager) getSystemService(
-                Context.UI_MODE_SERVICE);
-        final int currentNightMode = uiManager.getNightMode();
-        mNightModePreference.setSelectedValue(String.valueOf(currentNightMode));
-        mNightModePreference.setCallback(new DropDownPreference.Callback() {
-            @Override
-            public boolean onItemSelected(int pos, Object newValue) {
-                try {
-                    final int value = Integer.parseInt((String) newValue);
-                    final UiModeManager uiManager = (UiModeManager) getSystemService(
-                            Context.UI_MODE_SERVICE);
-                    uiManager.setNightMode(value);
-                    return true;
-                } catch (NumberFormatException e) {
-                    Log.e(TAG, "could not persist night mode setting", e);
-                    return false;
-                }
-            }
-        });
 
         mChamber = (Preference) findPreference(KEY_CHAMBER_OF_SECRETS);
         mAllPrefs.add(mChamber);
