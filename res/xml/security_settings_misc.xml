@@ -52,11 +52,6 @@
                 android:persistent="false"
                 android:fragment="com.android.settings.DeviceAdminSettings"/>
 
-        <Preference android:title="@string/app_ops_settings"
-                android:summary="@string/app_ops_settings_summary"
-                android:persistent="false"
-                android:fragment="com.android.settings.applications.AppOpsSummary"/>
-
         <SwitchPreference android:key="toggle_install_applications"
                 android:title="@string/install_applications"
                 android:summaryOff="@string/install_unknown_applications"
@@ -113,12 +108,6 @@
                 android:summary="@string/manage_trust_agents_summary"
                 android:persistent="false"
                 android:fragment="com.android.settings.TrustAgentSettings"/>
-
-        <PreferenceScreen
-                android:key="screen_pinning_settings"
-                android:title="@string/screen_pinning_title"
-                android:summary="@string/switch_off_text"
-                android:fragment="com.android.settings.ScreenPinningSettings"/>
 
         <Preference android:key="usage_access"
                     android:title="@string/usage_access_title"
