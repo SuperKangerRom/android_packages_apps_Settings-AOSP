@@ -158,10 +158,6 @@ public class QSTileHolder {
                 resourceName = "ic_qs_network_adb_on";
                 stringId = R.string.qs_tile_adb;
                 break;
-            case QSConstants.TILE_LOCKSCREEN:
-                resourceName = "ic_qs_lock_screen_on";
-                stringId = R.string.qs_tile_lockscreen;
-                break;
             case QSConstants.TILE_DND:
                 resourceName = "ic_qs_dnd_on";
                 stringId = R.string.qs_tile_dnd;
