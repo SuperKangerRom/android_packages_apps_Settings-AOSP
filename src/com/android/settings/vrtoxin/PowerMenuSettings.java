@@ -107,7 +107,7 @@ public class PowerMenuSettings extends SettingsPreferenceFragment implements
                 Settings.System.POWER_MENU_ICON_NORMAL_COLOR,
                 WHITE); 
         mIconNormalColor.setNewPreviewColor(intColor);
-        hexColor = String.format("#%08x", (0xffffffff & intColor));
+        hexColor = String.format("#%08x", (MATERIAL_TEAL_500 & intColor));
         mIconNormalColor.setSummary(hexColor);
         mIconNormalColor.setOnPreferenceChangeListener(this);
 
@@ -136,7 +136,7 @@ public class PowerMenuSettings extends SettingsPreferenceFragment implements
                 Settings.System.POWER_MENU_TEXT_COLOR,
                 WHITE); 
         mTextColor.setNewPreviewColor(intColor);
-        hexColor = String.format("#%08x", (0xffffffff & intColor));
+        hexColor = String.format("#%08x", (0xff000000 & intColor));
         mTextColor.setSummary(hexColor);
         mTextColor.setOnPreferenceChangeListener(this);
 
@@ -268,7 +268,7 @@ public class PowerMenuSettings extends SettingsPreferenceFragment implements
                                     WHITE);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.POWER_MENU_TEXT_COLOR,
-                                    MATERIAL_TEAL_500);
+                                    0xff000000);
                             getOwner().refreshSettings();
                         }
                     })
