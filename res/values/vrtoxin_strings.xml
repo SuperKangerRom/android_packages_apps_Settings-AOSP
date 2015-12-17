@@ -563,6 +563,7 @@
     <string name="qs_tile_reboot">Reboot/Recovery</string>
     <string name="qs_tile_adb">Adb-Over-Network</string>
     <string name="qs_tile_compass">Compass</string>
+    <string name="qs_tile_lockscreen">LockScreen</string>
     <string name="qs_tile_batterysaver">Battery Saver</string>
     <string name="qs_tile_dnd">Do Not Disturb</string>
 
