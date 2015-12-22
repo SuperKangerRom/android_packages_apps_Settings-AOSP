@@ -1821,4 +1821,8 @@
     <string name="alarm_indicator">Alarm Indicator</string>
     <string name="alarm_indicator_summary">Show alarm clock indicator if alarm is set</string> 
 
+    <!-- Camera Double-Tap vibration -->
+    <string name="dbl_tap_vib_title">Double tap power for camera vibration</string>
+    <string name="dbl_tap_vib_summary">Vibrate on double tap of power button when enabled</string>
+
 </resources>
