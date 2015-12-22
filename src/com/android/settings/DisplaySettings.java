@@ -37,7 +37,6 @@ import android.app.ActivityManagerNative;
 import android.app.Dialog;
 import android.app.IActivityManager;
 import android.app.ProgressDialog;
-import android.app.UiModeManager;
 import android.app.admin.DevicePolicyManager;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -93,7 +92,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_TAP_TO_WAKE = "tap_to_wake";
     private static final String KEY_AUTO_BRIGHTNESS = "auto_brightness";
     private static final String KEY_AUTO_ROTATE = "auto_rotate";
-    private static final String KEY_NIGHT_MODE = "night_mode";
     private static final String KEY_CAMERA_GESTURE = "camera_gesture";
     private static final String KEY_CAMERA_DOUBLE_TAP_POWER_GESTURE
             = "camera_double_tap_power_gesture";
@@ -101,7 +99,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_DISPLAY_ROTATION = "display_rotation";
     private static final String CATEGORY_ADVANCED = "advanced_display_prefs";
     private static final String KEY_SCREEN_COLOR_SETTINGS = "screencolor_settings";
-    private static final String OVERRIDE_CUSTOM_COLORS = "pref_override_custom_colors";
 
     private static final int DLG_GLOBAL_CHANGE_WARNING = 1;
 
@@ -112,7 +109,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private final Configuration mCurConfig = new Configuration();
 
     private ListPreference mScreenTimeoutPreference;
-    private ListPreference mNightModePreference;
     private Preference mScreenSaverPreference;
     private PreferenceScreen mDisplayRotationPreference;
     private SwitchPreference mLiftToWakePreference;
@@ -122,7 +118,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private SwitchPreference mCameraGesturePreference;
     private SwitchPreference mCameraDoubleTapPowerGesturePreference;
     private SwitchPreference mWakeWhenPluggedOrUnplugged;
-    private SwitchPreference mOverrideCustomColor;
 
     private static final String ROTATION_ANGLE_0 = "0";
     private static final String ROTATION_ANGLE_90 = "90";
@@ -164,11 +159,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mScreenTimeoutPreference.setOnPreferenceChangeListener(this);
         disableUnusableTimeouts(mScreenTimeoutPreference);
         updateTimeoutPreferenceDescription(currentTimeout);
-
-        mOverrideCustomColor = (SwitchPreference) findPreference(OVERRIDE_CUSTOM_COLORS);
-        mOverrideCustomColor.setChecked((Settings.System.getInt(getContentResolver(),
-                Settings.System.OVERRIDE_CUSTOM_COLORS, 0) == 1));
-        mOverrideCustomColor.setOnPreferenceChangeListener(this);
 
         mLcdDensityPreference = (ListPreference) findPreference(KEY_LCD_DENSITY);
         if (mLcdDensityPreference != null) {
@@ -248,15 +238,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             mDisplayRotationPreference = (PreferenceScreen) findPreference(KEY_DISPLAY_ROTATION);
         } else {
             removePreference(KEY_DISPLAY_ROTATION);
-        }
-
-        mNightModePreference = (ListPreference) findPreference(KEY_NIGHT_MODE);
-        if (mNightModePreference != null) {
-            final UiModeManager uiManager = (UiModeManager) getSystemService(
-                    Context.UI_MODE_SERVICE);
-            final int currentNightMode = uiManager.getNightMode();
-            mNightModePreference.setValue(String.valueOf(currentNightMode));
-            mNightModePreference.setOnPreferenceChangeListener(this);
         }
 
         PreferenceCategory advancedPrefs = (PreferenceCategory) findPreference(CATEGORY_ADVANCED);
@@ -670,21 +651,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             boolean value = (Boolean) objValue;
             Settings.Secure.putInt(getContentResolver(), CAMERA_DOUBLE_TAP_POWER_GESTURE_DISABLED,
                     value ? 0 : 1 /* Backwards because setting is for disabling */);
-        }
-        if (preference == mOverrideCustomColor) {
-            boolean value = (Boolean) objValue;
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.OVERRIDE_CUSTOM_COLORS, value ? 1 : 0);
-        }
-        if (preference == mNightModePreference) {
-            try {
-                final int value = Integer.parseInt((String) objValue);
-                final UiModeManager uiManager = (UiModeManager) getSystemService(
-                        Context.UI_MODE_SERVICE);
-                uiManager.setNightMode(value);
-            } catch (NumberFormatException e) {
-                Log.e(TAG, "could not persist night mode setting", e);
-            }
         }
         return true;
     }
