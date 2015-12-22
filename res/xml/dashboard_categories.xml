@@ -110,6 +110,14 @@
                 android:icon="@drawable/ic_settings_vrtoxin"
                 />
 
+        <!-- Themes -->
+        <dashboard-tile
+                android:id="@+id/themes_settings"
+                android:title="@string/theme_settings_title"
+                android:fragment="com.android.settings.vrtoxin.ThemeSettings"
+                android:icon="@drawable/ic_settings_themes"
+                />
+
         <!-- Blacklist and App Ops -->
         <dashboard-tile
                 android:id="@+id/privacy_settings_vrtoxin"
