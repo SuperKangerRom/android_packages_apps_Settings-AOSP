@@ -79,6 +79,12 @@
             android:key="button_keys_home"
             android:title="@string/keys_home_press_title">
 
+            <com.android.settings.vrtoxin.SystemSettingSwitchPreference
+                android:key="home_wake_screen"
+                android:title="@string/button_wake_title"
+                android:summary="@string/home_wake_summary"
+                android:defaultValue="true" />
+
             <Preference
                 android:key="keys_home_press"
                 android:title="@string/keys_action_normal"
@@ -154,5 +160,35 @@
                 android:title="@string/keys_action_double"
                 android:dependency="enable_hardware_rebind" />
         </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="volume_keys"
+        android:title="@string/hardware_keys_volume_keys_title" >
+
+        <SwitchPreference
+            android:key="volume_key_wake_device"
+            android:title="@string/volbtn_wake_device_title"
+            android:summary="@string/volbtn_wake_device_summary"
+            android:defaultValue="false" />
+
+        <com.android.settings.vrtoxin.SystemSettingSwitchPreference
+            android:key="volume_keys_control_ring_stream"
+            android:title="@string/volume_keys_control_ring_stream_title"
+            android:summary="@string/volume_keys_control_ring_stream_summary" />
+
+        <ListPreference
+            android:key="volume_key_cursor_control"
+            android:dialogTitle="@string/volbtn_cursor_control_title"
+            android:title="@string/volbtn_cursor_control_title"
+            android:entries="@array/volbtn_cursor_control_entries"
+            android:entryValues="@array/volbtn_cursor_control_values"
+            android:persistent="false" />
+
+        <SwitchPreference
+            android:key="swap_volume_buttons"
+            android:title="@string/swap_volume_buttons_title"
+            android:summary="@string/swap_volume_buttons_summary" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
