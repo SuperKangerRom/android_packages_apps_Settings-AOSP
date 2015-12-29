@@ -1867,6 +1867,7 @@
     <string name="power_menu_animation_top">Top</string>
     <string name="power_menu_animation_left">Left</string>
     <string name="power_menu_animation_right">Right</string>
+    <string name="power_menu_animation_rotate">Rotate</string>
 
     <!-- Volume keys control  -->
     <string name="hardware_keys_volume_keys_title">Volume Keys</string>
