@@ -136,7 +136,7 @@ import com.android.settings.vrtoxin.gestureanywhere.GestureAnywhereSettings;
 import com.android.settings.vrtoxin.NavigationBarSettings;
 import com.android.settings.vrtoxin.AppCircleBar;
 import com.android.settings.vrtoxin.AppSideBar;
-import com.android.settings.vrtoxin.ButtonSettings;
+import com.android.settings.vrtoxin.HwKeySettings;
 import com.android.settings.vrtoxin.ThemeSettings;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -375,7 +375,7 @@ public class SettingsActivity extends Activity
             NavigationBarSettings.class.getName(),
             AppCircleBar.class.getName(),
             AppSideBar.class.getName(),
-            ButtonSettings.class.getName(),
+            HwKeySettings.class.getName(),
             ThemeSettings.class.getName()
     };
 
