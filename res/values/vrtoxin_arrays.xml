@@ -537,6 +537,7 @@
     <string-array name="shortcut_action_entries">
         <item>@string/shortcut_action_back</item>-
         <item>@string/shortcut_action_app</item>-
+        <item>@string/shortcut_action_floating_windows</item>
         <item>@string/shortcut_action_home</item>-
         <item>@string/shortcut_action_menu</item>
         <item>@string/shortcut_action_ime</item>
@@ -555,6 +556,7 @@
     <string-array name="shortcut_action_values" translatable="false">
         <item>**back**</item>
         <item>**app**</item>
+        <item>**floating_windows**</item>
         <item>**home**</item>
         <item>**menu_big**</item>
         <item>**ime**</item>
@@ -1613,6 +1615,7 @@
     <string-array name="shortcut_action_launcher_entries">
         <item>@string/shortcut_action_home</item>
         <item>@string/shortcut_action_back</item>
+        <item>@string/shortcut_action_floating_windows</item>
         <item>@string/shortcut_action_search</item>
         <item>@string/shortcut_action_voice_search</item>
         <item>@string/shortcut_action_menu</item>
@@ -1645,6 +1648,7 @@
     <string-array name="shortcut_action_launcher_values" translatable="false">
         <item>**home**</item>
         <item>**back**</item>
+        <item>**floating_windows**</item>
         <item>**search**</item>
         <item>**voice_search**</item>
         <item>**menu**</item>
@@ -1711,6 +1715,7 @@
         <item>@string/qab_button_display_inversion</item>
         <item>@string/qab_button_display_rotation</item>
         <item>@string/qab_button_flashlight</item>
+        <item>@string/qs_tile_floating_windows</item>
         <item>@string/qab_button_gesture_anywhere</item>
         <item>@string/qab_button_hotspot</item>
         <item>@string/qab_button_hwkeys</item>
@@ -1720,6 +1725,7 @@
         <item>@string/qab_button_powermenu</item>
         <item>@string/qab_button_systemui_restart</item>
         <item>@string/qab_button_screen_off</item>
+        <item>@string/qs_tile_slim_floats</item>
         <item>@string/qab_button_slimpie</item>
         <item>@string/qab_button_themes</item>
         <item>@string/qab_button_vrtoxin</item>
@@ -1735,6 +1741,7 @@
         <item>inversion</item>
         <item>rotation</item>
         <item>flashlight</item>
+        <item>floating_windows</item>
         <item>gestureanywhere</item>
         <item>hotspot</item>
         <item>hwkeys</item>
@@ -1744,6 +1751,7 @@
         <item>powermenu</item>
         <item>restartui</item>
         <item>screenoff</item>
+        <item>slim_floats</item>
         <item>slimpie</item>
         <item>themes</item>
         <item>vrtoxin</item>

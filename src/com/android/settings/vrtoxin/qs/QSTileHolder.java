@@ -194,6 +194,14 @@ public class QSTileHolder {
                 resourceName = "ic_qs_sidebar_off";
                 stringId = R.string.qs_tile_appsidebar;
                 break;
+            case QSConstants.TILE_FLOATING_WINDOWS:
+                resourceName = "ic_qs_floating_on";
+                stringId = R.string.qs_tile_floating_windows;
+                break;
+            case QSConstants.TILE_SLIM_FLOATS:
+                resourceName = "ic_qs_floating_on";
+                stringId = R.string.qs_tile_slim_floats;
+                break;
             default:
                 return null;
         }
