@@ -1296,6 +1296,7 @@
     <string name="lock_screen_number_of_notifications_six_title">6</string>
     <string name="weather_cat_notifications_title">Notifications</string>
     <string name="lock_screen_weather_settings_title">Lockscreen Weather</string>
+    <string name="lock_screen_clock_font_size_title">LockClock Size</string>
     <string name="lock_screen_weather_settings_summary">Customize Lockscreen Weather Display</string>
     <string name="lock_screen_color_settings_summary">Customize Colors</string>
     <string name="weather_show_weather_title">Show Weather</string>
