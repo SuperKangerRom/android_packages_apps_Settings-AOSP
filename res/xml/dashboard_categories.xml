@@ -102,6 +102,7 @@
             android:key="@string/category_key_device"
             android:title="@string/header_category_device" >
 
+        <!-- VRToxinMods -->
         <dashboard-tile
                 android:id="@+id/custom_settings"
                 android:icon="@drawable/ic_settings_vrtoxin"
@@ -111,14 +112,6 @@
                     android:targetPackage="com.android.vrtoxin"
                     android:targetClass="com.android.vrtoxin.TinkerActivity" />
         </dashboard-tile>
-
-        <!-- VRToxin Settings -->
-        <dashboard-tile
-                android:id="@+id/main_settings"
-                android:title="@string/vrtoxin_settings_title"
-                android:fragment="com.android.settings.vrtoxin.MainSettings"
-                android:icon="@drawable/ic_settings_vrtoxin"
-                />
 
         <!-- Themes -->
         <dashboard-tile
