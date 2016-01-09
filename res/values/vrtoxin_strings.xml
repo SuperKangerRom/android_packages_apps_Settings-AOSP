@@ -1994,4 +1994,7 @@
     <string name="battery_stats_message">Battery history stats are going to be reset</string>
     <string name="ok_string">Ok</string>
 
+    <!-- Option to Disable Brightness Icon In Brightness Slider -->
+    <string name="brightness_icon_title">Brightness Icon</string>
+    <string name="brightness_icon_summary">Enable icon next to brightness slider</string>
 </resources>
