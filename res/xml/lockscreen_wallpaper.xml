@@ -24,6 +24,7 @@
         <Preference
             android:key="lockscreen_wallpaper_set"
             android:title="@string/lockscreen_wallpaper_set_title"
+            android:summary="@string/lockscreen_wallpaper_set_summary"
             android:persistent="false"/>
 
         <Preference
@@ -33,18 +34,21 @@
 
     </PreferenceCategory>
 
-    <com.android.settings.vrtoxin.SystemSettingSwitchPreference
-        android:key="lockscreen_see_through"
-        android:title="@string/lockscreen_see_through_title"
-        android:summary="@string/lockscreen_see_through_summary"
-        android:defaultValue="false" />
-
-    <com.android.settings.vrtoxin.SeekBarPreference
-        android:key="lockscreen_blur_radius"
-        android:title="@string/lockscreen_blur_radius"
-        android:dependency="lockscreen_see_through"
-        android:defaultValue="14"
-        android:max="25"
-        settings:min="0" />
+    <!--<PreferenceCategory
+        android:key="lockscreen_blur"
+        android:title="@string/lockscreen_see_through_title" >
+        <SwitchPreference
+            android:key="lockscreen_see_through"
+            android:title="@string/lockscreen_see_through_title"
+            android:summary="@string/lockscreen_see_through_summary"
+            android:disableDependentsState="true"
+            android:defaultValue="false" />
+        <com.android.settings.vrtoxin.SeekBarPreference
+            android:key="lockscreen_blur_radius"
+            android:title="@string/lockscreen_blur_radius"
+            android:max="25"
+            settings:min="0"
+            android:defaultValue="14" />
+    </PreferenceCategory>-->
 
 </PreferenceScreen>
