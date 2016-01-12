@@ -84,6 +84,12 @@
                 android:entries="@array/screen_timeout_entries"
                 android:entryValues="@array/screen_timeout_values" />
 
+        <com.android.settings.vrtoxin.SystemSettingSwitchPreference
+                android:key="dashboard_column_count"
+                android:title="@string/two_columns_title"
+                android:summary="@string/two_columns_summary"
+                android:defaultValue="false" />
+
         <PreferenceCategory
             android:key="dt2l_target_category"
             android:title="@string/dt2l_target_category">
