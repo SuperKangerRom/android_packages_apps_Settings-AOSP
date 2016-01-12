@@ -129,6 +129,24 @@
                 android:title="@string/uber_flags"
                 android:summary="@string/uber_flags_default" />
 
+        <Preference android:key="sm_android"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/sm_android"
+                android:summary="@string/sm_android_default"
+                android:selectable="false" />
+
+        <Preference android:key="sm_kernel"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/sm_kernel"
+                android:summary="@string/sm_kernel_default"
+                android:selectable="false" />
+
+        <Preference android:key="sm_flags"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/sm_flags"
+                android:summary="@string/sm_flags_default"
+                android:selectable="false" />
+
         <!-- Detailed build version -->
         <Preference android:key="build_number"
                 style="?android:preferenceInformationStyle"

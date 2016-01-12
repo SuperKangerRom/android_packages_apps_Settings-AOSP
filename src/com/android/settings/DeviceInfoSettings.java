@@ -89,6 +89,15 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_UBER_AND = "uber_android";
     private static final String KEY_UBER_KERNEL = "uber_kernel";
     private static final String KEY_UBER_FLAGS = "uber_flags";
+    private static final String PROPERTY_UBER_AND = "ro.uber.android";
+    private static final String PROPERTY_UBER_KERNEL = "ro.uber.kernel";
+    private static final String PROPERTY_UBER_FLAGS = "ro.uber.flags";
+    private static final String KEY_SM_AND = "sm_android";
+    private static final String KEY_SM_KERNEL = "sm_kernel";
+    private static final String KEY_SM_FLAGS = "sm_flags";
+    private static final String PROPERTY_SM_AND = "ro.sm.android";
+    private static final String PROPERTY_SM_KERNEL = "ro.sm.kernel";
+    private static final String PROPERTY_SM_FLAGS = "ro.sm.flags";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
     private static final String KEY_VRTOXIN_SHARE = "share";
@@ -138,11 +147,12 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         findPreference(KEY_BUILD_NUMBER).setEnabled(true);
         findPreference(KEY_KERNEL_VERSION).setSummary(getFormattedKernelVersion());
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
-        findPreference(KEY_UBER_KERNEL).setEnabled(true);
-        findPreference(KEY_UBER_FLAGS).setEnabled(true);
-        setValueSummary(KEY_UBER_AND, "ro.uber.android");
-        setValueSummary(KEY_UBER_KERNEL, "ro.uber.kernel");
-        setValueSummary(KEY_UBER_FLAGS, "ro.uber.flags");
+        setValueSummary(KEY_UBER_AND, PROPERTY_UBER_AND);
+        setValueSummary(KEY_UBER_KERNEL,  PROPERTY_UBER_KERNEL);
+        setValueSummary(KEY_UBER_FLAGS, PROPERTY_UBER_FLAGS);
+        setValueSummary(KEY_SM_AND, PROPERTY_SM_AND);
+        setValueSummary(KEY_SM_KERNEL,  PROPERTY_SM_KERNEL);
+        setValueSummary(KEY_SM_FLAGS, PROPERTY_SM_FLAGS);
 
         if (!SELinux.isSELinuxEnabled()) {
             String status = getResources().getString(R.string.selinux_status_disabled);
@@ -174,6 +184,22 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         // Remove Safety information preference if PROPERTY_URL_SAFETYLEGAL is not set
         removePreferenceIfPropertyMissing(getPreferenceScreen(), KEY_SAFETY_LEGAL,
                 PROPERTY_URL_SAFETYLEGAL);
+
+        // Remove GCC UBER information if property is not present
+        removePreferenceIfPropertyMissing(getPreferenceScreen(), KEY_UBER_AND,
+                PROPERTY_UBER_AND);
+        removePreferenceIfPropertyMissing(getPreferenceScreen(), KEY_UBER_KERNEL,
+                PROPERTY_UBER_KERNEL);
+        removePreferenceIfPropertyMissing(getPreferenceScreen(), KEY_UBER_FLAGS,
+                PROPERTY_UBER_FLAGS);
+
+        // Remove GCC SaberMod information if property is not present
+        removePreferenceIfPropertyMissing(getPreferenceScreen(), KEY_SM_AND,
+                PROPERTY_SM_AND);
+        removePreferenceIfPropertyMissing(getPreferenceScreen(), KEY_SM_KERNEL,
+                PROPERTY_SM_KERNEL);
+        removePreferenceIfPropertyMissing(getPreferenceScreen(), KEY_SM_FLAGS,
+                PROPERTY_SM_FLAGS);
 
         // Remove Equipment id preference if FCC ID is not set by RIL
         removePreferenceIfPropertyMissing(getPreferenceScreen(), KEY_EQUIPMENT_ID,
