@@ -1747,19 +1747,19 @@
     <!-- Power menu Animations  -->
     <string-array name="power_menu_animations_entries">
         <item>@string/power_menu_animation_aosp</item>
+        <item>@string/power_menu_animation_card</item>
         <item>@string/power_menu_animation_bottom</item>
+        <item>@string/power_menu_animation_xylon</item>
+        <item>@string/power_menu_animation_fly</item>
         <item>@string/power_menu_animation_grow</item>
         <item>@string/power_menu_animation_left</item>
         <item>@string/power_menu_animation_right</item>
         <item>@string/power_menu_animation_rotate</item>
-        <item>@string/power_menu_animation_top</item>
-        <item>@string/power_menu_animation_xylon</item>
         <item>@string/power_menu_animation_slide</item>
-        <item>@string/power_menu_animation_turn</item>
-        <item>@string/power_menu_animation_fly</item>
-        <item>@string/power_menu_animation_card</item>
-        <item>@string/power_menu_animation_translucent_top</item>
+        <item>@string/power_menu_animation_top</item>
         <item>@string/power_menu_animation_translucent_bottom</item>
+        <item>@string/power_menu_animation_translucent_top</item>
+        <item>@string/power_menu_animation_turn</item>
     </string-array>
 
     <string-array name="power_menu_animations_values" translatable="false">
@@ -1776,7 +1776,6 @@
         <item>11</item>
         <item>12</item>
         <item>13</item>
-        <item>14</item>
     </string-array>
 
     <!-- Less Notifications -->
