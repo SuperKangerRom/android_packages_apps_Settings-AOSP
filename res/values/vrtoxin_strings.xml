@@ -1974,9 +1974,9 @@
     <string name="wifi_auto_config_priorities">Automatic priority</string>
 
     <!-- Lock Clock Fonts -->
-    <string name="lock_clock_font_title">Lock Clock Fonts</string>
-    <string name="lock_clock_font_summary">Change the default font of the lockscreen clock widget</string>
-    <string name="lock_clock_font_dialog_title">Select lock clock font</string>
+    <string name="lock_clock_font_title">Font Style</string>
+    <string name="lock_clock_font_summary">Change the default font of the lock screen</string>
+    <string name="lock_clock_font_dialog_title">Select lock screen font</string>
     <string name="lock_clock_font_normal">Default</string>
     <string name="lock_clock_font_bold">Bold</string>
     <string name="lock_clock_font_italic">Italic</string>
