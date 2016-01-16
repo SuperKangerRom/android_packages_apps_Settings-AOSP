@@ -2875,6 +2875,7 @@
         <activity android:name=".vrtoxin.gestureanywhere.GestureAnywhereCreateGestureActivity" />
         <activity android:name=".vrtoxin.WeatherSettings" />
         <activity android:name=".vrtoxin.SlimSizer" />
+        <activity android:name=".headsup.HeadsUpSettings" />
 
     </application>
 </manifest>
