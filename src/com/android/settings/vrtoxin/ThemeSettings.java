@@ -24,6 +24,7 @@ import android.app.IUiModeManager;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.RemoteException;
@@ -42,6 +43,7 @@ import android.view.MenuItem;
 import com.android.internal.logging.MetricsLogger;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.Utils;
 
 public class ThemeSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -50,6 +52,11 @@ public class ThemeSettings extends SettingsPreferenceFragment implements
     private static final String NIGHT_MODE = "night_mode";
     private static final String NIGHT_AUTO_MODE = "night_auto_mode";
     private static final String OVERRIDE_CUSTOM_COLORS = "override_custom_colors";
+    public static final String LAYERS_PACKAGE_NAME = "com.lovejoy777.rroandlayersmanager";
+    public static Intent INTENT_LAYERS_SETTINGS = new Intent(Intent.ACTION_MAIN)
+            .setClassName(LAYERS_PACKAGE_NAME, LAYERS_PACKAGE_NAME + ".menu");
+    private static final String CATEGORY_LAYERS = "layers_manager";
+    private static final String DASHBOARD_FONT_STYLE = "dashboard_font_style";
 
     private static final int MENU_RESET = Menu.FIRST;
     private static final int DLG_RESET = 0;
@@ -57,6 +64,8 @@ public class ThemeSettings extends SettingsPreferenceFragment implements
     private ListPreference mNightModePreference;
     private ListPreference mNightAutoMode;
     private SwitchPreference mOverrideCustomColor;
+    private PreferenceCategory mLayers;
+    private ListPreference mDashFontStyle;
 
     private ContentResolver mResolver;
 
@@ -119,6 +128,17 @@ public class ThemeSettings extends SettingsPreferenceFragment implements
                 Settings.System.OVERRIDE_CUSTOM_COLORS, 0) == 1));
         mOverrideCustomColor.setOnPreferenceChangeListener(this);
 
+        mDashFontStyle = (ListPreference) findPreference(DASHBOARD_FONT_STYLE);
+        mDashFontStyle.setOnPreferenceChangeListener(this);
+        mDashFontStyle.setValue(Integer.toString(Settings.System.getInt(getActivity()
+                .getContentResolver(), Settings.System.DASHBOARD_FONT_STYLE, 0)));
+        mDashFontStyle.setSummary(mDashFontStyle.getEntry());
+
+        mLayers = (PreferenceCategory) findPreference(CATEGORY_LAYERS);
+        if (!Utils.isPackageInstalled(getActivity(), LAYERS_PACKAGE_NAME)) {
+            prefSet.removePreference(mLayers);
+        }
+
         setHasOptionsMenu(true);
     }
 
@@ -146,6 +166,13 @@ public class ThemeSettings extends SettingsPreferenceFragment implements
             boolean value = (Boolean) newValue;
             Settings.System.putInt(mResolver,
                     Settings.System.OVERRIDE_CUSTOM_COLORS, value ? 1 : 0);
+        } else if (preference == mDashFontStyle) {
+            int val = Integer.parseInt((String) newValue);
+            int index = mDashFontStyle.findIndexOfValue((String) newValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.DASHBOARD_FONT_STYLE, val);
+            mDashFontStyle.setSummary(mDashFontStyle.getEntries()[index]);
+            return true;
         }
         if (preference == mNightModePreference) {
             try {

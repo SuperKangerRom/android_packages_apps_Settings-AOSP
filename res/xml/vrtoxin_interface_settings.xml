@@ -53,11 +53,4 @@
         android:fragment="com.android.settings.vrtoxin.pie.PieControl"
         android:title="@string/pie_control_title" />
 
-    <!-- Wallpaper -->
-    <PreferenceScreen
-        android:key="wallpaper"
-        android:title="@string/wallpaper_settings_title"
-        android:summary="@string/lockscreen_wallpaper_summary"
-        android:fragment="com.android.settings.WallpaperTypeSettings" />
-
 </PreferenceScreen>
