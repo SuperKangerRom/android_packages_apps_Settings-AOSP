@@ -67,6 +67,7 @@ import android.widget.SearchView;
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.util.ArrayUtils;
 import com.android.internal.util.XmlUtils;
+import com.android.settings.UsageStatsActivity;
 import com.android.settings.accessibility.AccessibilitySettings;
 import com.android.settings.accessibility.CaptionPropertiesFragment;
 import com.android.settings.accounts.AccountSettings;
@@ -389,7 +390,8 @@ public class SettingsActivity extends Activity
             NotificationLightSettings.class.getName(),
             NotificationManagerSettings.class.getName(),
             ScreenPinningSettings.class.getName(),
-            HeadsUpSettings.class.getName()
+            HeadsUpSettings.class.getName(),
+            UsageStatsActivity.class.getName()
     };
 
 

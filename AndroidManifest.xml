@@ -1996,6 +1996,20 @@
             </intent-filter>
         </activity>
 
+        <!-- UsageStatsActivity -->
+        <activity android:name="Settings$UsageStatsActivity"
+                android:label="@string/usage_stats_label"
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.UsageStatsActivity" />
+            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
+                android:resource="@id/display_settings" />
+        </activity>
+
         <activity android:name="Settings$PowerUsageSummaryActivity"
                 android:label="@string/power_usage_summary_title"
                 android:taskAffinity="">
