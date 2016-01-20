@@ -2073,4 +2073,8 @@
     <!-- Fingerprint authentication vibration -->
     <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
     <string name="fprint_sucess_vib_summary">Vibrate on successful fingerprint authentication</string>
+
+    <!-- Screenshot sound -->
+    <string name="screenshot_sound_title">Screenshot Sound</string>
+    <string name="screenshot_sound_summary">Plays sound effect when screenshot is taken</string>
 </resources>
