@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 The VRToxin Project
+ * Copyright (C) 2015-2016 The VRToxin Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -56,6 +56,7 @@ import com.android.settings.vrtoxin.StatusBarSettings;
 import com.android.settings.vrtoxin.VrtoxinNotifs;
 import com.android.settings.vrtoxin.WakelockBlocker;
 import com.android.settings.vrtoxin.WeatherControl;
+import com.android.settings.notification.OtherSoundSettings;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -115,21 +116,22 @@ public class MainSettings extends SettingsPreferenceFragment {
 
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
-            frags[0] = new MasterAnimationControl();
-            frags[1] = new PowerUsageSummary();
-            frags[2] = new HwKeySettings();
-            frags[3] = new FloatingWindows();
-            frags[4] = new InterfaceSettings();
-            frags[5] = new LockS();
-            frags[6] = new NavigationBarSettings();
-            frags[7] = new VrtoxinNotifs();
-            frags[8] = new PowerMenuSettings();
-            frags[9] = new QuickSettings();
-            frags[10] = new AndroidRecentsSettings();
-            frags[11] = new StatusBarSettings();
-            frags[12] = new SlimSizer();
-            frags[13] = new WakelockBlocker();
-            frags[14] = new WeatherControl();
+            frags[0] = new OtherSoundSettings();
+            frags[1] = new MasterAnimationControl();
+            frags[2] = new PowerUsageSummary();
+            frags[3] = new HwKeySettings();
+            frags[4] = new FloatingWindows();
+            frags[5] = new InterfaceSettings();
+            frags[6] = new LockS();
+            frags[7] = new NavigationBarSettings();
+            frags[8] = new VrtoxinNotifs();
+            frags[9] = new PowerMenuSettings();
+            frags[10] = new QuickSettings();
+            frags[11] = new AndroidRecentsSettings();
+            frags[12] = new StatusBarSettings();
+            frags[13] = new SlimSizer();
+            frags[14] = new WakelockBlocker();
+            frags[15] = new WeatherControl();
         }
 
         @Override
@@ -152,6 +154,7 @@ public class MainSettings extends SettingsPreferenceFragment {
         String titleString[];
         if (!ScreenType.isPhone(getActivity())) {
         titleString = new String[]{
+                    getString(R.string.advanced_sound_title),
                     getString(R.string.vrtoxin_animations_settings),
                     getString(R.string.power_usage_summary_title),
                     getString(R.string.buttons_settings_title),
@@ -169,6 +172,7 @@ public class MainSettings extends SettingsPreferenceFragment {
                     getString(R.string.weather_control_master_title)};
         } else {
         titleString = new String[]{
+                    getString(R.string.advanced_sound_title),
                     getString(R.string.vrtoxin_animations_settings),
                     getString(R.string.power_usage_summary_title),
                     getString(R.string.buttons_settings_title),
