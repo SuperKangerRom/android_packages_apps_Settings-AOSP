@@ -746,21 +746,16 @@
     <string name="recent_app_sidebar_bg_color_title">Background color</string>
     <string name="recent_app_sidebar_scale_title">Size</string>
 
-    <!-- Navigation bar settings -->
+  <!-- Navigation bar settings -->
     <string name="navigation_bar_settings_title">Navigation Bar</string>
-    <string name="navigation_enable_bar">Enable navigation bar</string>
-    <string name="navbar_settings_summary">Customize navbar &amp; select custom shortcuts &amp; actions</string>
-    <string name="navigation_enable_bar_summary">Enable the navigation bar</string>
-    <string name="navigation_bar_cat_buttons_title">Buttons</string>
-    <string name="navigation_bar_cat_landscape_title">On landscape</string>
-    <string name="navigation_bar_cat_size_title">Size</string>
-    <string name="navigation_bar_button_settings_title">Customize</string>
-    <string name="navigation_bar_button_settings_summary">Arrange the buttons, and choose the buttons to display on the navigation bar.</string>
-    <string name="navigation_bar_button_advanced_title">Advanced settings</string>
-    <string name="navigation_bar_button_advanced_summary">Customize advanced functions and colors</string>
-    <string name="navigation_bar_can_move_title">Show on bottom</string>
-    <string name="navigation_bar_can_move_summary">Enable to show the navigation bar  on the bottom</string>
-    <string name="navigation_bar_height_title">Height (portrait)</string>
+    <!-- Icon color options -->
+    <string name="icon_color_mode_all_icons">All icons</string>
+    <string name="icon_color_mode_system_icons">System icons</string>
+    <string name="icon_color_mode_system_custom_icons">System and custom icons</string>
+
+    <!-- Navigation bar -->
+    <string name="navigation_settings_category">Navigation</string>
+    <string name="navigation_settings_title">Navigation bar options</string>
     <string name="navigation_bar_size_42_dp_default">42 dp (default)</string>
     <string name="navigation_bar_size_36_dp">36 dp</string>
     <string name="navigation_bar_size_30_dp">30 dp</string>
@@ -770,29 +765,46 @@
     <string name="navigation_bar_size_40_dp">40 dp</string>
     <string name="navigation_bar_size_42_dp">42 dp</string>
     <string name="navigation_bar_size_0_dp">0 dp (off)</string>
-    <string name="navigation_bar_height_landscape_title">Height (landscape)</string>
-    <string name="navigation_bar_width_title">Width</string>
+    <string name="navigation_menu_right">Right</string>
+    <string name="navigation_menu_left">Left</string>
+    <string name="navigation_menu_both">Both</string>
+    <string name="navigation_menu_default_jb_behavior">Show on request (default)</string>
+    <string name="navigation_menu_never_show">Never show</string>
+    <string name="navigation_menu_always_show">Always show</string>
+    <string name="navbar_button_cat">Navigation bar buttons</string>
+    <string name="title_pref_menu_location">Menu location</string>
+    <string name="summary_pref_menu_location">Where do you want the menu buttons to appear?</string>
+    <string name="title_pref_menu_display">Menu visibility</string>
+    <string name="summary_pref_menu_display">How and when do you want the menu buttons to appear?</string>
+    <string name="navbar_enable_bar">Enable navigation bar</string>
+    <string name="navbar_enable_bar_summary">Enable the navigation bar</string>
+    <string name="navigation_bar_height_title">Navigation bar height</string>
+    <string name="navigation_bar_height_summary">Navigation bar height while in portrait.</string>
+    <string name="navigation_bar_height_landscape_title">Navigation bar height landscape</string>
+    <string name="navigation_bar_height_landscape_summary">Navigation bar height while in landscape.</string>
+    <string name="navigation_bar_width_title">Navigation bar width</string>
+    <string name="navigation_bar_width_summary">Navigation bar height if the bar is along a side.</string>
+    <string name="navbar_can_move">Show landscape</string>
+    <string name="navbar_can_move_summary">Shows navigation bar in landscape on the bottom</string>
+    <string name="navbar_style_dimen_title">Dimensions</string>
+    <string name="navbar_style_dimen_summary">Change navigation bar height</string>
+    <string name="navbar_button_title">Buttons</string>
+    <string name="navbar_button_summary">Configure the buttons to show on navigation bar</string>
+    <string name="navbar_cat">Navigation bar</string>
+    <string name="navbar_dimensions_reset_message">Reset all dimensions entries to default?</string>
+    <string name="navbar_button_style_reset_message">Reset all style entries to default?</string>
+    <string name="navigation_bar_show_ime_arrows_title">Show arrow keys while typing</string>
+    <string name="navigation_bar_show_ime_arrows_summary">Display left and right cursor buttons in navigation bar while typing. Longpress to navigate up/down. Overrides IME switcher and menu buttons.</string>
 
-    <!-- Navigation bar advanced settings -->
-    <string name="navigation_bar_cat_menu_button_title">Menu button</string>
-    <string name="navigation_bar_show_ime_arrows_title">Show arrow keys</string>
-    <string name="navigation_bar_show_ime_arrows_summary">Show left and right cursor buttons while typing. Longpress to navigate up/down. Overrides IME switcher and menu buttons.</string>
-    <string name="navigation_bar_menu_visibility_title">Show</string>
-    <string name="navigation_bar_menu_visibility_request_title">On request (default)</string>
-    <string name="navigation_bar_menu_visibility_always_title">Always</string>
-    <string name="navigation_bar_menu_visibility_never_title">Never</string>
-    <string name="navigation_bar_menu_location_title">Position</string>
-    <string name="navigation_bar_menu_location_right_title">Right</string>
-    <string name="navigation_bar_menu_location_left_title">Left</string>
-    <string name="navigation_bar_menu_location_both_title">Left &amp; right</string>
-    <string name="navigation_bar_icon_color_mode_title">Colorize icon</string>
-    <string name="navigation_bar_icon_color_mode_dialog_title">Choose when to colorize the icon</string>
-    <string name="navigation_bar_button_ripple_color_mode_title">Ripple effect color mode</string>
-    <string name="navigation_bar_button_ripple_color_mode_dialog_title">Choose how to colorize the ripple effect</string>
-    <string name="navigation_bar_button_ripple_color_mode_auto_title">Auto</string>
-    <string name="navigation_bar_button_ripple_color_mode_custom_title">Custom color</string>
-    <string name="navigation_bar_button_ripple_color_mode_never_title">Don\`t colorize</string>
-    <string name="navigation_bar_button_ripple_color_title">Ripple effect</string>
+    <!-- Navigation bar button style -->
+    <string name="nav_bar_button_style">Button style</string>
+    <string name="nav_bar_button_style_summary">Change navigation bar button style</string>
+    <string name="button_transparency_title">Button transparency</string>
+    <string name="navigation_bar_icon_tint_title">Button color</string>
+    <string name="nav_button_color_mode_title">Color mode</string>
+    <string name="nav_button_color_mode_dialog_title">Colorize</string>
+    <string name="nav_button_color_mode_summary">Change the navigation bar button color mode</string>
+    <string name="navigation_bar_glow_tint_title">Button glow color</string>
 
     <!-- SlimDim -->
     <string name="dim_nav_buttons_category">SlimDim</string>
@@ -2118,5 +2130,10 @@
     <!-- Device policy override -->
     <string name="device_policy_override_title">Device Policy Override</string>
     <string name="device_policy_override_summary">Allow apps to force secure lock screen and override default settings</string>
+
+    <!-- Icon color options -->
+    <string name="icon_color_mode_all_icons">All icons</string>
+    <string name="icon_color_mode_system_icons">System icons</string>
+    <string name="icon_color_mode_system_custom_icons">System and custom icons</string>
 
 </resources>
