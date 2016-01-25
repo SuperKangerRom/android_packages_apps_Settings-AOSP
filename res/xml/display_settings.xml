@@ -26,11 +26,11 @@
                 android:summary="@string/auto_brightness_summary"
                 android:persistent="false" />
 
-        <!-- Doze // Ambient display -->
-        <PreferenceScreen
-                android:key="doze_fragment"
+        <SwitchPreference
+                android:key="doze"
                 android:title="@string/doze_title"
-                android:fragment="com.android.settings.vrtoxin.AmbientSettings" />
+                android:summary="@string/doze_summary"
+                android:persistent="false" />
 
         <PreferenceScreen
                 android:key="brightness"

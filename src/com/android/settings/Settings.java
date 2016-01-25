@@ -119,7 +119,6 @@ public class Settings extends SettingsActivity {
     public static class AppDrawOverlaySettingsActivity extends SettingsActivity { /* empty */ }
     public static class AppWriteSettingsActivity extends SettingsActivity { /* empty */ }
     public static class MainSettingsActivity extends SettingsActivity { /* empty */ }
-    public static class AmbientDisplaySettingsActivity extends SettingsActivity { /* empty */ }
     public static class PieControlSettingsActivity extends SettingsActivity { /* empty */ }
     public static class GestureAnywhereSettingsSettingsActivity extends SettingsActivity { /* empty */ }
     public static class NavigationSettingsSettingsActivity extends SettingsActivity { /* empty */ }

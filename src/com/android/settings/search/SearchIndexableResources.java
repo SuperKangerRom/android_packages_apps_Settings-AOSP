@@ -59,7 +59,6 @@ import com.android.settings.vrtoxin.InterfaceSettings;
 import com.android.settings.vrtoxin.Misc;
 import com.android.settings.vrtoxin.StatusBarSettings;
 import com.android.settings.vrtoxin.VrtoxinNotifs;
-import com.android.settings.vrtoxin.AmbientSettings;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -344,13 +343,6 @@ public final class SearchIndexableResources {
                         NO_DATA_RES_ID,
                         VrtoxinNotifs.class.getName(),
                         R.drawable.ic_settings_vrtoxin));
-
-        sResMap.put(AmbientSettings.class.getName(),
-                new SearchIndexableResource(
-                        Ranking.getRankForClassName(AmbientSettings.class.getName()),
-                        NO_DATA_RES_ID,
-                        AmbientSettings.class.getName(),
-                        R.drawable.ic_settings_display));
     }
 
     private SearchIndexableResources() {

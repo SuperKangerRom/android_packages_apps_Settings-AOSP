@@ -133,7 +133,6 @@ import com.android.settings.wifi.p2p.WifiP2pSettings;
 // VRToxin Additions
 import com.android.settings.vrtoxin.MainSettings;
 import com.android.settings.vrtoxin.StatusBarSettings;
-import com.android.settings.vrtoxin.AmbientSettings;
 import com.android.settings.vrtoxin.pie.PieControl;
 import com.android.settings.vrtoxin.gestureanywhere.GestureAnywhereSettings;
 import com.android.settings.vrtoxin.NavigationBarSettings;
@@ -372,11 +371,9 @@ public class SettingsActivity extends Activity
             WriteSettingsDetails.class.getName(),
             MainSettings.class.getName(),
             StatusBarSettings.class.getName(),
-            AmbientSettings.class.getName(),
             com.android.settings.vrtoxin.PrivacySettings.class.getName(),
             BlacklistSettings.class.getName(),
             ExpandedDesktopPreferenceFragment.class.getName(),
-            AmbientSettings.class.getName(),
             PieControl.class.getName(),
             GestureAnywhereSettings.class.getName(),
             NavigationBarSettings.class.getName(),
