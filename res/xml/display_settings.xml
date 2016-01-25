@@ -26,12 +26,6 @@
                 android:summary="@string/auto_brightness_summary"
                 android:persistent="false" />
 
-        <SwitchPreference
-                android:key="doze"
-                android:title="@string/doze_title"
-                android:summary="@string/doze_summary"
-                android:persistent="false" />
-
         <PreferenceScreen
                 android:key="brightness"
                 android:title="@string/brightness"
@@ -89,6 +83,26 @@
                 android:title="@string/two_columns_title"
                 android:summary="@string/two_columns_summary"
                 android:defaultValue="false" />
+
+        <PreferenceCategory
+            android:key="doze_notification_cat"
+            android:title="@string/doze_notification_cat_title">
+
+        <SwitchPreference
+                android:key="doze"
+                android:title="@string/doze_title"
+                android:summary="@string/doze_summary"
+                android:persistent="false" />
+
+        <com.android.settings.vrtoxin.SecureSettingSwitchPreference
+                android:defaultValue="true"
+                android:dependency="doze"
+                android:key="doze_notification_invert_enabled"
+                android:summaryOff="@string/doze_notification_color_invert_summary_off"
+                android:summaryOn="@string/doze_notification_color_invert_summary_on"
+                android:title="@string/doze_notification_color_invert_title" />
+
+        </PreferenceCategory>
 
         <PreferenceCategory
             android:key="dt2l_target_category"
