@@ -83,9 +83,9 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String PROPERTY_EQUIPMENT_ID = "ro.ril.fccid";
     private static final String KEY_DEVICE_FEEDBACK = "device_feedback";
     private static final String KEY_SAFETY_LEGAL = "safetylegal";
-    private static final String KEY_MOD_BUILD_DATE = "build_date";
     private static final String KEY_DEVICE_CPU = "device_cpu";
     private static final String KEY_DEVICE_MEMORY = "device_memory";
+    private static final String KEY_VRTOXIN_VERSION = "vrtoxin_version";
     private static final String KEY_UBER_AND = "uber_android";
     private static final String KEY_UBER_KERNEL = "uber_kernel";
     private static final String KEY_UBER_FLAGS = "uber_flags";
@@ -153,7 +153,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         setStringSummary(KEY_BUILD_NUMBER, Build.DISPLAY);
         findPreference(KEY_BUILD_NUMBER).setEnabled(true);
         findPreference(KEY_KERNEL_VERSION).setSummary(getFormattedKernelVersion());
-        setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
+        setValueSummary(KEY_VRTOXIN_VERSION, "ro.vrtoxin.version");
         setValueSummary(KEY_UBER_AND, PROPERTY_UBER_AND);
         setValueSummary(KEY_UBER_KERNEL,  PROPERTY_UBER_KERNEL);
         setValueSummary(KEY_UBER_FLAGS, PROPERTY_UBER_FLAGS);

@@ -101,11 +101,11 @@
                 android:title="@string/kernel_version"
                 android:summary="@string/device_info_default"/>
 
-        <!-- VRToxin build date -->
-        <Preference android:key="build_date"
+        <!-- VRToxin version -->
+        <Preference android:key="vrtoxin_version"
                 style="?android:preferenceInformationStyle"
-                android:title="@string/build_date"
-                android:summary="@string/build_date_default" />
+                android:title="@string/vrtoxin_version"
+                android:summary="@string/vrtoxin_version_default" />
 
         <!-- Device cpu info -->
         <Preference android:key="device_cpu"
