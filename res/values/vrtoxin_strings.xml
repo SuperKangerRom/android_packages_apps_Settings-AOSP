@@ -118,6 +118,10 @@
     <string name="sm_flags">Optimizations</string>
     <string name="sm_flags_default">None</string>
 
+    <!-- DRAGONTC version info -->
+    <string name="dragontc_clang">GCC Clang</string>
+    <string name="dragontc_clang_default">Unknown</string>
+
     <!-- VRToxin Changelog -->
     <string name="changelog_vrtoxin_title">Changelog</string>
     <string name="changelog_vrtoxin_error">Unable to load changelog</string>

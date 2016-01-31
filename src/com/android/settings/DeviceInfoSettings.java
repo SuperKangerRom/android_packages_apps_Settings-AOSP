@@ -94,6 +94,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String PROPERTY_UBER_FLAGS = "ro.uber.flags";
     private static final String KEY_SM_AND = "sm_android";
     private static final String KEY_SM_KERNEL = "sm_kernel";
+    private static final String KEY_DRAGONTC_VERSION = "dragontc_clang";
     private static final String KEY_SM_FLAGS = "sm_flags";
     private static final String PROPERTY_SM_AND = "ro.sm.android";
     private static final String PROPERTY_SM_KERNEL = "ro.sm.kernel";
@@ -159,6 +160,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         setValueSummary(KEY_UBER_FLAGS, PROPERTY_UBER_FLAGS);
         setValueSummary(KEY_SM_AND, PROPERTY_SM_AND);
         setValueSummary(KEY_SM_KERNEL,  PROPERTY_SM_KERNEL);
+        setValueSummary(KEY_DRAGONTC_VERSION, "ro.dragontc.version");
         setValueSummary(KEY_SM_FLAGS, PROPERTY_SM_FLAGS);
 
         if (!SELinux.isSELinuxEnabled()) {

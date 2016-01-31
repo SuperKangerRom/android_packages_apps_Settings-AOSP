@@ -130,6 +130,11 @@
                 android:title="@string/uber_kernel"
                 android:summary="@string/uber_kernel_default" />
 
+        <Preference android:key="dragontc_clang"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/dragontc_clang"
+                android:summary="@string/dragontc_clang_default" />
+
         <Preference android:key="uber_flags"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/uber_flags"
