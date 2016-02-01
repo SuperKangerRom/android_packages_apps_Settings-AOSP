@@ -2302,4 +2302,7 @@
     <!-- Whether the keyguard will directly pass to PIN entry -->
     <string name="lock_directly_show_pin">Directly show PIN entry</string>
 
+    <!--Quick unlock -->
+    <string name="unlock_quick_unlock_control_title">Quick unlock</string>
+    <string name="unlock_quick_unlock_control_summary">Automatically unlock as soon as the correct PIN/password has been entered (pressing OK not required)\nNote: will only work for 4 digit PIN/Password !</string>
 </resources>
