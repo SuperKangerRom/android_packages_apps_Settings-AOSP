@@ -2333,4 +2333,7 @@
     <string name="multi_user_switch_active_text_frame_color_title">Text and Icon Frame, (active user)</string>
     <string name="multi_user_switch_inactive_text_color_title">Text, (inactive users)</string>
 
+    <string name="battery_fully_charge_notif_title">Battery fully charged</string>
+    <string name="battery_fully_charge_notif_summary">Shows a notification when the battery is fully charged.</string>
+
 </resources>
