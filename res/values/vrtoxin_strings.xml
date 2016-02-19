@@ -119,7 +119,7 @@
     <string name="sm_flags_default">None</string>
 
     <!-- DRAGONTC version info -->
-    <string name="dragontc_clang">GCC Clang</string>
+    <string name="dragontc_clang">Clang Version</string>
     <string name="dragontc_clang_default">Unknown</string>
 
     <!-- VRToxin Changelog -->
