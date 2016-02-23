@@ -225,6 +225,10 @@ public class QSTileHolder {
                 resourceName = "ic_qs_vrtoxin";
                 stringId = R.string.qs_tile_vrtupdater;
                 break;
+            case QSConstants.TILE_CAFFEINE:
+                resourceName = "ic_qs_caffeine_on";
+                stringId = R.string.qs_tile_caffeine;
+                break;
             default:
                 return null;
         }
