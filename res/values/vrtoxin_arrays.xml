@@ -2151,4 +2151,19 @@
         <item>1</item>
         <item>2</item>
     </string-array>
+
+    <!-- Dash Columns -->
+    <string-array name="columns_entries">
+        <item>1(Default)</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="columns_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
 </resources>
