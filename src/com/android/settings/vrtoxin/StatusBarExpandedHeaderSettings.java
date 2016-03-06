@@ -55,7 +55,7 @@ public class StatusBarExpandedHeaderSettings extends SettingsPreferenceFragment 
     private static final int SYSTEMUI_SECONDARY = 0xff384248;
     private static final int BLACK = 0xff000000;
     private static final int WHITE = 0xffffffff;
-    private static final int VRTOXIN_BLUE = 0xff33b5e5;
+    private static final int VRTOXIN_BLUE = 0xff1976D2;
 
     private static final int MENU_RESET = Menu.FIRST;
     private static final int DLG_RESET  = 0;
@@ -315,6 +315,8 @@ public class StatusBarExpandedHeaderSettings extends SettingsPreferenceFragment 
                                     WHITE);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.POWER_MENU_BUTTON, 0);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.STATUS_BAR_HEADER_FONT_STYLE, 0);
                             getOwner().refreshSettings();
                         }
                     })
@@ -339,6 +341,8 @@ public class StatusBarExpandedHeaderSettings extends SettingsPreferenceFragment 
                                     VRTOXIN_BLUE);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.POWER_MENU_BUTTON, 2);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.STATUS_BAR_HEADER_FONT_STYLE, 20);
                             getOwner().refreshSettings();
                         }
                     })

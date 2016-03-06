@@ -145,6 +145,7 @@ import com.android.settings.vrtoxin.FloatingWindows;
 import com.android.settings.vrtoxin.dslv.ActionListViewSettings;
 import com.android.settings.headsup.HeadsUpSettings;
 import com.android.settings.vrtoxin.PowerMenuSettings;
+import com.android.settings.vrtoxin.StatusBarExpandedSettings;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -391,7 +392,8 @@ public class SettingsActivity extends Activity
             ScreenPinningSettings.class.getName(),
             HeadsUpSettings.class.getName(),
             PowerMenuSettings.class.getName(),
-            com.android.settings.vrtoxin.PrivacySettings.class.getName()
+            com.android.settings.vrtoxin.PrivacySettings.class.getName(),
+            StatusBarExpandedSettings.class.getName()
     };
 
 
