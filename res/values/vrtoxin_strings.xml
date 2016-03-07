@@ -2523,4 +2523,11 @@
     <string name="proximity_wake_title">Prevent accidental wake up</string>
     <string name="proximity_wake_summary">Check the proximity sensor prior to waking up screen</string>
 
+    <!-- Per app internet/data control -->
+    <string name="restrict_app_wlan_title">Disable app wifi usage</string>
+    <string name="restrict_app_wlan_summary">Prevent app from using wifi data connection</string>
+    <string name="restrict_app_cellular_title">Disable app cellular usage</string>
+    <string name="restrict_app_cellular_summary">Prevent app from using cellular data connection</string>
+    <string name="privacy_guard_internet_category">Internet</string>
+
 </resources>
