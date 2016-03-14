@@ -139,4 +139,5 @@ public class Settings extends SettingsActivity {
     public static class HeadsUpSettingsActivity extends SettingsActivity { /* empty */ }
     public static class PowerMenuSettingsActivity extends SettingsActivity { /* empty */ }
     public static class EmptyShadeSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class DashboardSettingsActivity extends SettingsActivity { /* empty */ }
 }

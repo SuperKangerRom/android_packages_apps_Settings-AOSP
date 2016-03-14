@@ -43,6 +43,7 @@ import com.android.internal.util.vrtoxin.ScreenType;
 import com.android.settings.fuelgauge.PowerUsageSummary;
 import com.android.settings.vrtoxin.PagerSlidingTabStrip;
 import com.android.settings.vrtoxin.AndroidRecentsSettings;
+import com.android.settings.vrtoxin.DashboardOptions;
 import com.android.settings.vrtoxin.FloatingWindows;
 import com.android.settings.vrtoxin.HwKeySettings;
 import com.android.settings.vrtoxin.InterfaceSettings;
@@ -124,14 +125,15 @@ public class MainSettings extends SettingsPreferenceFragment {
             frags[5] = new InterfaceSettings();
             frags[6] = new LockS();
             frags[7] = new NavigationBarSettings();
-            frags[8] = new VrtoxinNotifs();
-            frags[9] = new PowerMenuSettings();
-            frags[10] = new QuickSettings();
-            frags[11] = new AndroidRecentsSettings();
-            frags[12] = new StatusBarSettings();
-            frags[13] = new SlimSizer();
-            frags[14] = new WakelockBlocker();
-            frags[15] = new WeatherControl();
+            frags[8] = new DashboardOptions();
+            frags[9] = new VrtoxinNotifs();
+            frags[10] = new PowerMenuSettings();
+            frags[11] = new QuickSettings();
+            frags[12] = new AndroidRecentsSettings();
+            frags[13] = new StatusBarSettings();
+            frags[14] = new SlimSizer();
+            frags[15] = new WakelockBlocker();
+            frags[16] = new WeatherControl();
         }
 
         @Override
@@ -158,6 +160,7 @@ public class MainSettings extends SettingsPreferenceFragment {
                     getString(R.string.vrtoxin_animations_settings),
                     getString(R.string.power_usage_summary_title),
                     getString(R.string.buttons_settings_title),
+                    getString(R.string.settings_colors_title),
                     getString(R.string.floating_windows),
                     getString(R.string.interface_settings_title),
                     getString(R.string.lockscreen_settings),
@@ -176,6 +179,7 @@ public class MainSettings extends SettingsPreferenceFragment {
                     getString(R.string.vrtoxin_animations_settings),
                     getString(R.string.power_usage_summary_title),
                     getString(R.string.buttons_settings_title),
+                    getString(R.string.settings_colors_title),
                     getString(R.string.floating_windows),
                     getString(R.string.interface_settings_title),
                     getString(R.string.lockscreen_settings),

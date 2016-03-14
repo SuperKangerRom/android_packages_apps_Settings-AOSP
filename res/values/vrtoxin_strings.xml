@@ -2452,6 +2452,18 @@
     <string name="pa_pie_button_color">Button Color</string>
     <string name="pa_pie_button_color_title">Buttons Color</string>
 
+    <!-- Dashboard Options -->
+    <string name="settings_colors_title">Dashboard</string>
+    <string name="dashboard_colors_title">Colors</string>
+    <string name="dashboard_icons_title">Icons</string>
+    <string name="dashboard_text_title">Title Text</string>
+    <string name="text_cat_title">Category Text</string>
+    <string name="settings_colors_summary">Set custom colors for dashboard background, text, categories etc</string>
+    <string name="columns_title">Columns Count</string>
+    <string name="columns_summary">Allow using more than one column in the dashboard settings</string>
+    <string name="dash_switches_title">Switches</string>
+    <string name="dash_switches_summary">Whether to show switches on the dashboard</string>
+
     <!-- Empty Shade Shortcut Bar -->
     <string name="panel_shortcuts_title">Shortcut Bar</string>
     <string name="panel_shortcuts_summary">View/Change shortcuts in the EmptyShade Shortcut Bar. This is visible when no notifications are visible</string>
