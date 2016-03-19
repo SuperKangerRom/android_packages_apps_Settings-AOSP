@@ -54,6 +54,7 @@
         <item>@string/shortcut_action_floating_windows</item>
         <item>@string/shortcut_action_screenshot</item>
         <item>@string/shortcut_action_sound</item>
+        <item>@string/shortcut_action_torch</item>
     </string-array>
 
     <string-array name="power_menu_action_values" translatable="false">
@@ -74,6 +75,7 @@
         <item>**floating_windows**</item>
         <item>**screenshot**</item>
         <item>**sound**</item>
+        <item>**torch**</item>
     </string-array>
 
     <!-- Hide notifications arrays -->
