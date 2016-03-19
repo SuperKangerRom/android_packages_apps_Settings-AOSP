@@ -2168,4 +2168,16 @@
         <item>2</item>
         <item>3</item>
     </string-array>
+
+    <string-array name="weather_icon_type_entries" >
+        <item>@string/weather_icon_monochrome_title</item>
+        <item>@string/weather_icon_colored_title</item>
+        <item>@string/weather_icon_vclouds_title</item>
+    </string-array>
+
+    <string-array name="weather_icon_type_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
 </resources>
