@@ -2472,4 +2472,9 @@
     <string name="header_bar_ripple_color_mode_dialog_title">Choose how to colorize the ripple effect</string>
     <string name="colors_buttons_bar_ripple_color_title">Ripple Effect</string>
 
+    <!-- Dashboard Colors -->
+    <string name="settings_colors_title">Dashboard Custom Colors</string>
+    <string name="text_cat_title">Category Text</string>
+    <string name="settings_colors_summary">Set custom colors for dashboard background, text, categories etc</string>
+
 </resources>
