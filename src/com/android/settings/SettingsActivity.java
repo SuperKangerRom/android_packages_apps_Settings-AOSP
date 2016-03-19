@@ -147,6 +147,7 @@ import com.android.settings.vrtoxin.dslv.ActionListViewSettings;
 import com.android.settings.headsup.HeadsUpSettings;
 import com.android.settings.vrtoxin.PowerMenuSettings;
 import com.android.settings.vrtoxin.StatusBarExpandedSettings;
+import com.android.settings.vrtoxin.ExpansionView;
 import com.android.settings.vrtoxin.VolumeDialogSettings;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -395,7 +396,7 @@ public class SettingsActivity extends Activity
             HeadsUpSettings.class.getName(),
             PowerMenuSettings.class.getName(),
             com.android.settings.vrtoxin.PrivacySettings.class.getName(),
-            StatusBarExpandedSettings.class.getName(),
+            ExpansionView.class.getName(),
             DashboardOptions.class.getName(),
             VolumeDialogSettings.class.getName()
     };
