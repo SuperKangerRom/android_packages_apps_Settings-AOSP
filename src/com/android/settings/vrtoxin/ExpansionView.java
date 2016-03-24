@@ -1,5 +1,5 @@
 /* 
- * Copyright (C) 2014 DarkKat
+ * Copyright (C) 2016 Brett Rogers (rogersb11)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -58,6 +58,7 @@ public class ExpansionView extends SettingsPreferenceFragment implements
     private static final String EXPANSION_VIEW_WEATHER_TEXT_COLOR = "expansion_view_weather_text_color";
     private static final String EXPANSION_VIEW_BACKGROUND = "expansion_view_background";
     private static final String EXPANSION_VIEW_BACKGROUND_COLOR = "expansion_view_background_color";
+    private static final String EXPANSION_VIEW_ANIMATION = "expansion_view_animation";
 
     private static final int BLACK = 0xff000000;
     private static final int WHITE = 0xffffffff;
@@ -78,6 +79,7 @@ public class ExpansionView extends SettingsPreferenceFragment implements
     private ColorPickerPreference mExpansionViewWeatherTextColor;
     private ColorPickerPreference mExpansionViewBgColor;
     private SwitchPreference mShowBg;
+    private ListPreference mExpansionViewAnimation;
 
     private ContentResolver mResolver;
 
@@ -209,6 +211,12 @@ public class ExpansionView extends SettingsPreferenceFragment implements
             catColors.removePreference(findPreference(EXPANSION_VIEW_BACKGROUND_COLOR));
         }
 
+        mExpansionViewAnimation = (ListPreference) findPreference(EXPANSION_VIEW_ANIMATION);
+        mExpansionViewAnimation.setValue(String.valueOf(Settings.System.getInt(
+                getContentResolver(), Settings.System.EXPANSION_VIEW_ANIMATION, 0)));
+        mExpansionViewAnimation.setSummary(mExpansionViewAnimation.getEntry());
+        mExpansionViewAnimation.setOnPreferenceChangeListener(this);
+
         setHasOptionsMenu(true);
     }
 
@@ -325,6 +333,12 @@ public class ExpansionView extends SettingsPreferenceFragment implements
             Settings.System.putInt(mResolver,
                 Settings.System.EXPANSION_VIEW_BACKGROUND_COLOR, intHex);
             preference.setSummary(hex);
+        } else if (preference == mExpansionViewAnimation) {
+            Settings.System.putInt(mResolver, Settings.System.EXPANSION_VIEW_ANIMATION,
+                    Integer.valueOf((String) newValue));
+            mExpansionViewAnimation.setValue(String.valueOf(newValue));
+            mExpansionViewAnimation.setSummary(mExpansionViewAnimation.getEntry());
+            return true;
         }
         return false;
     }
@@ -393,6 +407,9 @@ public class ExpansionView extends SettingsPreferenceFragment implements
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.EXPANSION_VIEW_WEATHER_TEXT_COLOR,
                                     WHITE);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.EXPANSION_VIEW_ANIMATION,
+                                    0);
                             getOwner().refreshSettings();
                         }
                     })
@@ -421,6 +438,9 @@ public class ExpansionView extends SettingsPreferenceFragment implements
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.EXPANSION_VIEW_WEATHER_TEXT_COLOR,
                                     VRTOXIN_BLUE);
+                            Settings.System.putInt(getOwner().mResolver,
+                                    Settings.System.EXPANSION_VIEW_ANIMATION,
+                                    2);
                             getOwner().refreshSettings();
                         }
                     })

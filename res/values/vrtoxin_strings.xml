@@ -2476,7 +2476,7 @@
     <string name="dash_title_text_size">Title Text Size</string>
     <string name="dash_category_text_size">Category Text Size</string>
 
-    <!-- Empty Shade Shortcut Bar -->
+    <!-- Expansion View -->
     <string name="panel_shortcuts_title">Shortcut Bar</string>
     <string name="expansion_view_weather_panel">Weather Panel</string>
     <string name="weather_show_current_title">Show Current Weather</string>
@@ -2499,6 +2499,15 @@
     <string name="header_bar_ripple_color_mode_title">Colorize Ripple Effect</string>
     <string name="header_bar_ripple_color_mode_dialog_title">Choose how to colorize the ripple effect</string>
     <string name="colors_buttons_bar_ripple_color_title">Ripple Effect</string>
+    <string name="expansion_view_animation_title">Animation</string>
+    <string name="expansion_view_animation_summary">Change the enter/exit animation of the panel change</string>
+    <string name="expansion_view_animation_dialog_title">Select your animation</string>
+    <string name="expansion_view_animation_down">Down (Default)</string>
+    <string name="expansion_view_animation_left">Left</string>
+    <string name="expansion_view_animation_right">Right</string>
+    <string name="expansion_view_animation_rotate">Rotate</string>
+    <string name="expansion_view_animation_turn">Turn</string>
+    <string name="expansion_view_animation_up">Up</string>
 
     <!-- EXPERIMENTAL -->
     <string name="master_font_style_title">EXPERIMENTAL Master Font</string>
