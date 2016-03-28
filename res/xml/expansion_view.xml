@@ -26,7 +26,6 @@
         android:entries="@array/expansion_view_animation_entries"
         android:entryValues="@array/expansion_view_animation_values"
         android:summary="@string/expansion_view_animation_summary"
-        android:dependency="expansion_view_layout_changer"
         android:persistent="false" />
 
     <!-- Background -->
