@@ -146,7 +146,6 @@ import com.android.settings.vrtoxin.FloatingWindows;
 import com.android.settings.vrtoxin.dslv.ActionListViewSettings;
 import com.android.settings.headsup.HeadsUpSettings;
 import com.android.settings.vrtoxin.PowerMenuSettings;
-import com.android.settings.vrtoxin.StatusBarExpandedSettings;
 import com.android.settings.vrtoxin.ExpansionView;
 import com.android.settings.vrtoxin.VolumeDialogSettings;
 
