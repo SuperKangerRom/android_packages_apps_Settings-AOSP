@@ -566,6 +566,7 @@
     <string name="qs_bar_buttons_summary">Arrange &amp; choose the buttons to display on the bar</string>
     <string name="quick_settings_title">Quick Settings</string>
     <string name="qs_colors_title">Custom Colors</string>
+    <string name="qs_colors_summary">Customize every aspect of the Quick Settings panel colors</string>
     <string name="qs_num_columns_title">Number of Tiles Per Row</string>
     <string name="qs_num_columns_showing">%1$s tiles per row showing</string>
     <string name="qs_brightness_slider_title">Show Brightness Slider</string>
@@ -2335,6 +2336,7 @@
     <string name="app_ops_reset_counters">Reset allow/deny counters</string>
     <string name="app_ops_reset_confirm_title">Confirm counters reset</string>
     <string name="app_ops_reset_confirm_mesg">Are you sure you wish to reset counters?</string>
+    <string name="app_ops_disabled_by_optimization">Disabled by battery optimization</string>
 
     <!-- Memory -->
     <string name="memory_startup_apps_title">Apps started on boot</string>
