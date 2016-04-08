@@ -52,6 +52,7 @@ public class DozeSettingsFragment extends SettingsPreferenceFragment implements
     private static final String KEY_DOZE_SCHEDULE = "doze_schedule";
     private static final String KEY_DOZE_BRIGHTNESS = "doze_brightness";
     private static final String KEY_DOZE_NOTIFICATION_INVERT = "doze_notification_invert_enabled";
+    private static final String PREF_SHOW_BATTERY = "ambient_display_show_battery";
 
     private static final String SYSTEMUI_METADATA_NAME = "com.android.systemui";
 
@@ -62,9 +63,12 @@ public class DozeSettingsFragment extends SettingsPreferenceFragment implements
     private SwitchPreference mDozeSchedule;
     private SlimSeekBarPreference mDozeBrightness;
     private SwitchPreference mDozeNotifInvert;
+    private SwitchPreference mShowBattery;
 
     private float mBrightnessScale;
     private float mDefaultBrightnessScale;
+
+    private ContentResolver mResolver;
 
     @Override
     protected int getMetricsCategory() {
@@ -77,6 +81,7 @@ public class DozeSettingsFragment extends SettingsPreferenceFragment implements
 
         final Activity activity = getActivity();
         PreferenceScreen prefSet = getPreferenceScreen();
+        mResolver = getContentResolver();
         Resources res = getResources();
 
         addPreferencesFromResource(R.xml.doze_settings);
@@ -124,6 +129,11 @@ public class DozeSettingsFragment extends SettingsPreferenceFragment implements
         mDozeNotifInvert = (SwitchPreference) findPreference(KEY_DOZE_NOTIFICATION_INVERT);
         mDozeNotifInvert.setOnPreferenceChangeListener(this);
 
+            mShowBattery = (SwitchPreference) findPreference(PREF_SHOW_BATTERY);
+            mShowBattery.setChecked(Settings.System.getInt(mResolver,
+                    Settings.System.AMBIENT_DISPLAY_SHOW_BATTERY, 1) == 1);
+            mShowBattery.setOnPreferenceChangeListener(this);
+
         setHasOptionsMenu(false);
     }
 
@@ -131,38 +141,43 @@ public class DozeSettingsFragment extends SettingsPreferenceFragment implements
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mDozeTimeout) {
             int dozeTimeout = Integer.valueOf((String) newValue);
-            Settings.System.putInt(getContentResolver(),
+            Settings.System.putInt(mResolver,
                     Settings.System.DOZE_TIMEOUT, dozeTimeout);
         }
         if (preference == mDozeTriggerPickup) {
             boolean value = (Boolean) newValue;
-            Settings.System.putInt(getContentResolver(),
+            Settings.System.putInt(mResolver,
                     Settings.System.DOZE_TRIGGER_PICKUP, value ? 1 : 0);
         }
         if (preference == mDozeTriggerSigmotion) {
             boolean value = (Boolean) newValue;
-            Settings.System.putInt(getContentResolver(),
+            Settings.System.putInt(mResolver,
                     Settings.System.DOZE_TRIGGER_SIGMOTION, value ? 1 : 0);
         }
         if (preference == mDozeTriggerNotification) {
             boolean value = (Boolean) newValue;
-            Settings.System.putInt(getContentResolver(),
+            Settings.System.putInt(mResolver,
                     Settings.System.DOZE_TRIGGER_NOTIFICATION, value ? 1 : 0);
         }
         if (preference == mDozeSchedule) {
             boolean value = (Boolean) newValue;
-            Settings.System.putInt(getContentResolver(),
+            Settings.System.putInt(mResolver,
                     Settings.System.DOZE_SCHEDULE, value ? 1 : 0);
         }
         if (preference == mDozeBrightness) {
             float valNav = Float.parseFloat((String) newValue);
-            Settings.System.putFloat(getContentResolver(),
+            Settings.System.putFloat(mResolver,
                     Settings.System.DOZE_BRIGHTNESS, valNav / 100);
         }
         if (preference == mDozeNotifInvert) {
             boolean value = (Boolean) newValue;
-            Settings.Secure.putInt(getContentResolver(),
+            Settings.Secure.putInt(mResolver,
                     Settings.Secure.DOZE_NOTIFICATION_INVERT_ENABLED, value ? 1 : 0);
+        }
+        if (preference == mShowBattery) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(mResolver,
+                    Settings.System.AMBIENT_DISPLAY_SHOW_BATTERY, value ? 1 : 0);
         }
         return true;
     }

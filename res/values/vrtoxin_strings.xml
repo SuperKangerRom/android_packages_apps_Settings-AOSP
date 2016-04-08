@@ -2566,4 +2566,8 @@
     <string name="nfc_sound_mode_vibration">Vibration</string>
     <string name="nfc_sound_mode_mute">Mute</string>
 
+    <!-- Ambient display settings -->
+    <string name="ambient_display_show_battery_title">Show battery status</string>
+    <string name="ambient_display_show_battery_summary">Enable to show the battery status</string>
+
 </resources>

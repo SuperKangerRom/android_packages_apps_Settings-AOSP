@@ -65,4 +65,9 @@
             android:title="@string/doze_brightness_title"
             android:summary="@string/doze_brightness_summary" />
 
+    <SwitchPreference
+            android:key="ambient_display_show_battery"
+            android:title="@string/ambient_display_show_battery_title"
+            android:summary="@string/ambient_display_show_battery_summary" />
+
 </PreferenceScreen>
