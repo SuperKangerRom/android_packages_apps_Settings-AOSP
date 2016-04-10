@@ -2575,4 +2575,9 @@
     <string name="ambient_display_show_battery_title">Show battery status</string>
     <string name="ambient_display_show_battery_summary">Enable to show the battery status</string>
 
+    <!-- Ambient display dt2w -->
+    <string name="doze_wakeup_doubletap_title">Double-tap To Wake </string>
+    <string name="doze_wakeup_doubletap_summary_on">Require a double-tap to wake the device on a doze pulse screen</string>
+    <string name="doze_wakeup_doubletap_summary_off">Require a simple-tap to wake the device on a doze pulse screen (default)</string>
+
 </resources>
