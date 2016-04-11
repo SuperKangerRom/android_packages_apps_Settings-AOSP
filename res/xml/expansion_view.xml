@@ -93,7 +93,7 @@
         android:key="expansion_view_text"
         android:title="@string/expansion_view_text_title"
         android:summary="@string/expansion_view_text_summary"
-        android:defaultValue="true" />
+        android:defaultValue="false" />
 
     <!-- Vibration -->
     <com.android.settings.vrtoxin.SystemSettingSwitchPreference
