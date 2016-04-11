@@ -121,11 +121,11 @@ public class MainSettings extends SettingsPreferenceFragment {
             frags[1] = new MasterAnimationControl();
             frags[2] = new PowerUsageSummary();
             frags[3] = new HwKeySettings();
-            frags[4] = new FloatingWindows();
-            frags[5] = new InterfaceSettings();
-            frags[6] = new LockS();
-            frags[7] = new NavigationBarSettings();
-            frags[8] = new DashboardOptions();
+            frags[4] = new DashboardOptions();
+            frags[5] = new FloatingWindows();
+            frags[6] = new InterfaceSettings();
+            frags[7] = new LockS();
+            frags[8] = new NavigationBarSettings();
             frags[9] = new VrtoxinNotifs();
             frags[10] = new PowerMenuSettings();
             frags[11] = new QuickSettings();
