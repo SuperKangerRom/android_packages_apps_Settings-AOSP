@@ -2502,7 +2502,7 @@
     <string name="expansion_view_layout_changer">Layout Changer</string>
     <string name="expansion_view_layout_changer_summary">Enable to show the layout changer button in the expansion View</string>
     <string name="panel_shortcuts_title">Shortcut Bar</string>
-    <string name="expansion_view_animation_enter">Enter</string>
+    <string name="expansion_view_info_panel">Info Panel</string>
     <string name="expansion_view_weather_panel">Weather Panel</string>
     <string name="weather_show_current_title">Show Current Weather</string>
     <string name="weather_show_current_summary">Enable to show the current weather information next to daily forecasts</string>
@@ -2528,6 +2528,7 @@
     <string name="expansion_view_animation_summary">Change the enter/exit animation of the panel change</string>
     <string name="expansion_view_animation_dialog_title">Select your animation</string>
     <string name="expansion_view_animation_down">Down (Default)</string>
+    <string name="expansion_view_animation_enter">Enter</string>
     <string name="expansion_view_animation_left">Left</string>
     <string name="expansion_view_animation_right">Right</string>
     <string name="expansion_view_animation_rotate">Rotate</string>
